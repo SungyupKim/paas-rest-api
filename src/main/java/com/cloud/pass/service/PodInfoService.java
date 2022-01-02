@@ -13,8 +13,8 @@ import com.cloud.pass.grpc.common.Common.CommonRequest;
 import io.grpc.ManagedChannelBuilder;
 
 public class PodInfoService {
-	private static final int PORT = 3010;
-	public static final String HOST = "localhost";
+	private static final int PORT = 80;
+	public static final String HOST = "kubectl-cli.dev.svc.cluster.local";
 	private final static Logger log = Logger.getGlobal();
 	private final KubectlClientBlockingStub blockingStub = KubectlClientGrpc
 			.newBlockingStub(ManagedChannelBuilder.forAddress(HOST, PORT).usePlaintext().build());
