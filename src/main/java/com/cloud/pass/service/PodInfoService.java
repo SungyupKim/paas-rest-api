@@ -13,6 +13,8 @@ import com.cloud.pass.grpc.common.Common.CommonRequest;
 import io.grpc.ManagedChannelBuilder;
 
 public class PodInfoService {
+	private static final int PORT_LOCAL = 3010;
+	public static final String HOST_LOCAL = "127.0.0.1";
 	private static final int PORT = 80;
 	public static final String HOST = "kubectl-cli.dev.svc.cluster.local";
 	private final static Logger log = Logger.getGlobal();
@@ -24,18 +26,7 @@ public class PodInfoService {
 		final GetPodsRequest sampleRequest = GetPodsRequest.newBuilder().setNamespace(namespace).setReq(request).build();
 
 		GetPodsResponse response = blockingStub.getPods(sampleRequest);
-		/*
-		 * blockingStub.getPods(sampleRequest, new StreamObserver<GetPodsResponse>() {
-		 * 
-		 * @Override public void onError(Throwable t) {
-		 * log.severe("GrpcClient#sampleCall - onError"); }
-		 * 
-		 * @Override public void onCompleted() {
-		 * log.info("GrpcClient#sampleCall - onCompleted"); }
-		 * 
-		 * @Override public void onNext(GetPodsResponse value) { // TODO Auto-generated
-		 * method stub log.info("GrpcClient#sampleCall - {}" + value); } });
-		 */
+	
 		return response;
 	}
 }

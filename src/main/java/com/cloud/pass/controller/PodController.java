@@ -17,7 +17,6 @@ import com.google.protobuf.util.JsonFormat;
 @RestController
 public class PodController {
 	private static final PodInfoService podInfoService = new PodInfoService();
-	private static final String template = "Hello, %s!";
 	@ResponseBody
 	@GetMapping(value="/cluster/{cluster}/namespace/{namespace}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Object> getPodInfo(@PathVariable String cluster, @PathVariable String namespace) {

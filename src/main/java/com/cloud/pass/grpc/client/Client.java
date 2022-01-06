@@ -1745,6 +1745,1414 @@ public final class Client {
 
   }
 
+  public interface GetNamespaceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GetNamespaceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.CommonRequest req = 1;</code>
+     */
+    boolean hasReq();
+    /**
+     * <code>.CommonRequest req = 1;</code>
+     */
+    com.cloud.pass.grpc.common.Common.CommonRequest getReq();
+    /**
+     * <code>.CommonRequest req = 1;</code>
+     */
+    com.cloud.pass.grpc.common.Common.CommonRequestOrBuilder getReqOrBuilder();
+  }
+  /**
+   * Protobuf type {@code GetNamespaceRequest}
+   */
+  public  static final class GetNamespaceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:GetNamespaceRequest)
+      GetNamespaceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetNamespaceRequest.newBuilder() to construct.
+    private GetNamespaceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetNamespaceRequest() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetNamespaceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.cloud.pass.grpc.common.Common.CommonRequest.Builder subBuilder = null;
+              if (req_ != null) {
+                subBuilder = req_.toBuilder();
+              }
+              req_ = input.readMessage(com.cloud.pass.grpc.common.Common.CommonRequest.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(req_);
+                req_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cloud.pass.grpc.client.Client.internal_static_GetNamespaceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cloud.pass.grpc.client.Client.internal_static_GetNamespaceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cloud.pass.grpc.client.Client.GetNamespaceRequest.class, com.cloud.pass.grpc.client.Client.GetNamespaceRequest.Builder.class);
+    }
+
+    public static final int REQ_FIELD_NUMBER = 1;
+    private com.cloud.pass.grpc.common.Common.CommonRequest req_;
+    /**
+     * <code>.CommonRequest req = 1;</code>
+     */
+    public boolean hasReq() {
+      return req_ != null;
+    }
+    /**
+     * <code>.CommonRequest req = 1;</code>
+     */
+    public com.cloud.pass.grpc.common.Common.CommonRequest getReq() {
+      return req_ == null ? com.cloud.pass.grpc.common.Common.CommonRequest.getDefaultInstance() : req_;
+    }
+    /**
+     * <code>.CommonRequest req = 1;</code>
+     */
+    public com.cloud.pass.grpc.common.Common.CommonRequestOrBuilder getReqOrBuilder() {
+      return getReq();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (req_ != null) {
+        output.writeMessage(1, getReq());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (req_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getReq());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cloud.pass.grpc.client.Client.GetNamespaceRequest)) {
+        return super.equals(obj);
+      }
+      com.cloud.pass.grpc.client.Client.GetNamespaceRequest other = (com.cloud.pass.grpc.client.Client.GetNamespaceRequest) obj;
+
+      boolean result = true;
+      result = result && (hasReq() == other.hasReq());
+      if (hasReq()) {
+        result = result && getReq()
+            .equals(other.getReq());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasReq()) {
+        hash = (37 * hash) + REQ_FIELD_NUMBER;
+        hash = (53 * hash) + getReq().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cloud.pass.grpc.client.Client.GetNamespaceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code GetNamespaceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:GetNamespaceRequest)
+        com.cloud.pass.grpc.client.Client.GetNamespaceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cloud.pass.grpc.client.Client.internal_static_GetNamespaceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cloud.pass.grpc.client.Client.internal_static_GetNamespaceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cloud.pass.grpc.client.Client.GetNamespaceRequest.class, com.cloud.pass.grpc.client.Client.GetNamespaceRequest.Builder.class);
+      }
+
+      // Construct using com.cloud.pass.grpc.client.Client.GetNamespaceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (reqBuilder_ == null) {
+          req_ = null;
+        } else {
+          req_ = null;
+          reqBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cloud.pass.grpc.client.Client.internal_static_GetNamespaceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.GetNamespaceRequest getDefaultInstanceForType() {
+        return com.cloud.pass.grpc.client.Client.GetNamespaceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.GetNamespaceRequest build() {
+        com.cloud.pass.grpc.client.Client.GetNamespaceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.GetNamespaceRequest buildPartial() {
+        com.cloud.pass.grpc.client.Client.GetNamespaceRequest result = new com.cloud.pass.grpc.client.Client.GetNamespaceRequest(this);
+        if (reqBuilder_ == null) {
+          result.req_ = req_;
+        } else {
+          result.req_ = reqBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cloud.pass.grpc.client.Client.GetNamespaceRequest) {
+          return mergeFrom((com.cloud.pass.grpc.client.Client.GetNamespaceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cloud.pass.grpc.client.Client.GetNamespaceRequest other) {
+        if (other == com.cloud.pass.grpc.client.Client.GetNamespaceRequest.getDefaultInstance()) return this;
+        if (other.hasReq()) {
+          mergeReq(other.getReq());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.cloud.pass.grpc.client.Client.GetNamespaceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.cloud.pass.grpc.client.Client.GetNamespaceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.cloud.pass.grpc.common.Common.CommonRequest req_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cloud.pass.grpc.common.Common.CommonRequest, com.cloud.pass.grpc.common.Common.CommonRequest.Builder, com.cloud.pass.grpc.common.Common.CommonRequestOrBuilder> reqBuilder_;
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public boolean hasReq() {
+        return reqBuilder_ != null || req_ != null;
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public com.cloud.pass.grpc.common.Common.CommonRequest getReq() {
+        if (reqBuilder_ == null) {
+          return req_ == null ? com.cloud.pass.grpc.common.Common.CommonRequest.getDefaultInstance() : req_;
+        } else {
+          return reqBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public Builder setReq(com.cloud.pass.grpc.common.Common.CommonRequest value) {
+        if (reqBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          req_ = value;
+          onChanged();
+        } else {
+          reqBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public Builder setReq(
+          com.cloud.pass.grpc.common.Common.CommonRequest.Builder builderForValue) {
+        if (reqBuilder_ == null) {
+          req_ = builderForValue.build();
+          onChanged();
+        } else {
+          reqBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public Builder mergeReq(com.cloud.pass.grpc.common.Common.CommonRequest value) {
+        if (reqBuilder_ == null) {
+          if (req_ != null) {
+            req_ =
+              com.cloud.pass.grpc.common.Common.CommonRequest.newBuilder(req_).mergeFrom(value).buildPartial();
+          } else {
+            req_ = value;
+          }
+          onChanged();
+        } else {
+          reqBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public Builder clearReq() {
+        if (reqBuilder_ == null) {
+          req_ = null;
+          onChanged();
+        } else {
+          req_ = null;
+          reqBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public com.cloud.pass.grpc.common.Common.CommonRequest.Builder getReqBuilder() {
+        
+        onChanged();
+        return getReqFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public com.cloud.pass.grpc.common.Common.CommonRequestOrBuilder getReqOrBuilder() {
+        if (reqBuilder_ != null) {
+          return reqBuilder_.getMessageOrBuilder();
+        } else {
+          return req_ == null ?
+              com.cloud.pass.grpc.common.Common.CommonRequest.getDefaultInstance() : req_;
+        }
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cloud.pass.grpc.common.Common.CommonRequest, com.cloud.pass.grpc.common.Common.CommonRequest.Builder, com.cloud.pass.grpc.common.Common.CommonRequestOrBuilder> 
+          getReqFieldBuilder() {
+        if (reqBuilder_ == null) {
+          reqBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cloud.pass.grpc.common.Common.CommonRequest, com.cloud.pass.grpc.common.Common.CommonRequest.Builder, com.cloud.pass.grpc.common.Common.CommonRequestOrBuilder>(
+                  getReq(),
+                  getParentForChildren(),
+                  isClean());
+          req_ = null;
+        }
+        return reqBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:GetNamespaceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:GetNamespaceRequest)
+    private static final com.cloud.pass.grpc.client.Client.GetNamespaceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cloud.pass.grpc.client.Client.GetNamespaceRequest();
+    }
+
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetNamespaceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetNamespaceRequest>() {
+      @java.lang.Override
+      public GetNamespaceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetNamespaceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetNamespaceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetNamespaceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cloud.pass.grpc.client.Client.GetNamespaceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetNamespaceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GetNamespaceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.CommonResponse resp = 1;</code>
+     */
+    boolean hasResp();
+    /**
+     * <code>.CommonResponse resp = 1;</code>
+     */
+    com.cloud.pass.grpc.common.Common.CommonResponse getResp();
+    /**
+     * <code>.CommonResponse resp = 1;</code>
+     */
+    com.cloud.pass.grpc.common.Common.CommonResponseOrBuilder getRespOrBuilder();
+
+    /**
+     * <code>repeated string namespace = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getNamespaceList();
+    /**
+     * <code>repeated string namespace = 2;</code>
+     */
+    int getNamespaceCount();
+    /**
+     * <code>repeated string namespace = 2;</code>
+     */
+    java.lang.String getNamespace(int index);
+    /**
+     * <code>repeated string namespace = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNamespaceBytes(int index);
+  }
+  /**
+   * Protobuf type {@code GetNamespaceResponse}
+   */
+  public  static final class GetNamespaceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:GetNamespaceResponse)
+      GetNamespaceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetNamespaceResponse.newBuilder() to construct.
+    private GetNamespaceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetNamespaceResponse() {
+      namespace_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetNamespaceResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.cloud.pass.grpc.common.Common.CommonResponse.Builder subBuilder = null;
+              if (resp_ != null) {
+                subBuilder = resp_.toBuilder();
+              }
+              resp_ = input.readMessage(com.cloud.pass.grpc.common.Common.CommonResponse.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resp_);
+                resp_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                namespace_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              namespace_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          namespace_ = namespace_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cloud.pass.grpc.client.Client.internal_static_GetNamespaceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cloud.pass.grpc.client.Client.internal_static_GetNamespaceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cloud.pass.grpc.client.Client.GetNamespaceResponse.class, com.cloud.pass.grpc.client.Client.GetNamespaceResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RESP_FIELD_NUMBER = 1;
+    private com.cloud.pass.grpc.common.Common.CommonResponse resp_;
+    /**
+     * <code>.CommonResponse resp = 1;</code>
+     */
+    public boolean hasResp() {
+      return resp_ != null;
+    }
+    /**
+     * <code>.CommonResponse resp = 1;</code>
+     */
+    public com.cloud.pass.grpc.common.Common.CommonResponse getResp() {
+      return resp_ == null ? com.cloud.pass.grpc.common.Common.CommonResponse.getDefaultInstance() : resp_;
+    }
+    /**
+     * <code>.CommonResponse resp = 1;</code>
+     */
+    public com.cloud.pass.grpc.common.Common.CommonResponseOrBuilder getRespOrBuilder() {
+      return getResp();
+    }
+
+    public static final int NAMESPACE_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList namespace_;
+    /**
+     * <code>repeated string namespace = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getNamespaceList() {
+      return namespace_;
+    }
+    /**
+     * <code>repeated string namespace = 2;</code>
+     */
+    public int getNamespaceCount() {
+      return namespace_.size();
+    }
+    /**
+     * <code>repeated string namespace = 2;</code>
+     */
+    public java.lang.String getNamespace(int index) {
+      return namespace_.get(index);
+    }
+    /**
+     * <code>repeated string namespace = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNamespaceBytes(int index) {
+      return namespace_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (resp_ != null) {
+        output.writeMessage(1, getResp());
+      }
+      for (int i = 0; i < namespace_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, namespace_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (resp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getResp());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < namespace_.size(); i++) {
+          dataSize += computeStringSizeNoTag(namespace_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getNamespaceList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cloud.pass.grpc.client.Client.GetNamespaceResponse)) {
+        return super.equals(obj);
+      }
+      com.cloud.pass.grpc.client.Client.GetNamespaceResponse other = (com.cloud.pass.grpc.client.Client.GetNamespaceResponse) obj;
+
+      boolean result = true;
+      result = result && (hasResp() == other.hasResp());
+      if (hasResp()) {
+        result = result && getResp()
+            .equals(other.getResp());
+      }
+      result = result && getNamespaceList()
+          .equals(other.getNamespaceList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResp()) {
+        hash = (37 * hash) + RESP_FIELD_NUMBER;
+        hash = (53 * hash) + getResp().hashCode();
+      }
+      if (getNamespaceCount() > 0) {
+        hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
+        hash = (53 * hash) + getNamespaceList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cloud.pass.grpc.client.Client.GetNamespaceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code GetNamespaceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:GetNamespaceResponse)
+        com.cloud.pass.grpc.client.Client.GetNamespaceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cloud.pass.grpc.client.Client.internal_static_GetNamespaceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cloud.pass.grpc.client.Client.internal_static_GetNamespaceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cloud.pass.grpc.client.Client.GetNamespaceResponse.class, com.cloud.pass.grpc.client.Client.GetNamespaceResponse.Builder.class);
+      }
+
+      // Construct using com.cloud.pass.grpc.client.Client.GetNamespaceResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (respBuilder_ == null) {
+          resp_ = null;
+        } else {
+          resp_ = null;
+          respBuilder_ = null;
+        }
+        namespace_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cloud.pass.grpc.client.Client.internal_static_GetNamespaceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.GetNamespaceResponse getDefaultInstanceForType() {
+        return com.cloud.pass.grpc.client.Client.GetNamespaceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.GetNamespaceResponse build() {
+        com.cloud.pass.grpc.client.Client.GetNamespaceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.GetNamespaceResponse buildPartial() {
+        com.cloud.pass.grpc.client.Client.GetNamespaceResponse result = new com.cloud.pass.grpc.client.Client.GetNamespaceResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (respBuilder_ == null) {
+          result.resp_ = resp_;
+        } else {
+          result.resp_ = respBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          namespace_ = namespace_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.namespace_ = namespace_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cloud.pass.grpc.client.Client.GetNamespaceResponse) {
+          return mergeFrom((com.cloud.pass.grpc.client.Client.GetNamespaceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cloud.pass.grpc.client.Client.GetNamespaceResponse other) {
+        if (other == com.cloud.pass.grpc.client.Client.GetNamespaceResponse.getDefaultInstance()) return this;
+        if (other.hasResp()) {
+          mergeResp(other.getResp());
+        }
+        if (!other.namespace_.isEmpty()) {
+          if (namespace_.isEmpty()) {
+            namespace_ = other.namespace_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureNamespaceIsMutable();
+            namespace_.addAll(other.namespace_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.cloud.pass.grpc.client.Client.GetNamespaceResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.cloud.pass.grpc.client.Client.GetNamespaceResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cloud.pass.grpc.common.Common.CommonResponse resp_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cloud.pass.grpc.common.Common.CommonResponse, com.cloud.pass.grpc.common.Common.CommonResponse.Builder, com.cloud.pass.grpc.common.Common.CommonResponseOrBuilder> respBuilder_;
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public boolean hasResp() {
+        return respBuilder_ != null || resp_ != null;
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public com.cloud.pass.grpc.common.Common.CommonResponse getResp() {
+        if (respBuilder_ == null) {
+          return resp_ == null ? com.cloud.pass.grpc.common.Common.CommonResponse.getDefaultInstance() : resp_;
+        } else {
+          return respBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public Builder setResp(com.cloud.pass.grpc.common.Common.CommonResponse value) {
+        if (respBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resp_ = value;
+          onChanged();
+        } else {
+          respBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public Builder setResp(
+          com.cloud.pass.grpc.common.Common.CommonResponse.Builder builderForValue) {
+        if (respBuilder_ == null) {
+          resp_ = builderForValue.build();
+          onChanged();
+        } else {
+          respBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public Builder mergeResp(com.cloud.pass.grpc.common.Common.CommonResponse value) {
+        if (respBuilder_ == null) {
+          if (resp_ != null) {
+            resp_ =
+              com.cloud.pass.grpc.common.Common.CommonResponse.newBuilder(resp_).mergeFrom(value).buildPartial();
+          } else {
+            resp_ = value;
+          }
+          onChanged();
+        } else {
+          respBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public Builder clearResp() {
+        if (respBuilder_ == null) {
+          resp_ = null;
+          onChanged();
+        } else {
+          resp_ = null;
+          respBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public com.cloud.pass.grpc.common.Common.CommonResponse.Builder getRespBuilder() {
+        
+        onChanged();
+        return getRespFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public com.cloud.pass.grpc.common.Common.CommonResponseOrBuilder getRespOrBuilder() {
+        if (respBuilder_ != null) {
+          return respBuilder_.getMessageOrBuilder();
+        } else {
+          return resp_ == null ?
+              com.cloud.pass.grpc.common.Common.CommonResponse.getDefaultInstance() : resp_;
+        }
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cloud.pass.grpc.common.Common.CommonResponse, com.cloud.pass.grpc.common.Common.CommonResponse.Builder, com.cloud.pass.grpc.common.Common.CommonResponseOrBuilder> 
+          getRespFieldBuilder() {
+        if (respBuilder_ == null) {
+          respBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cloud.pass.grpc.common.Common.CommonResponse, com.cloud.pass.grpc.common.Common.CommonResponse.Builder, com.cloud.pass.grpc.common.Common.CommonResponseOrBuilder>(
+                  getResp(),
+                  getParentForChildren(),
+                  isClean());
+          resp_ = null;
+        }
+        return respBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList namespace_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureNamespaceIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          namespace_ = new com.google.protobuf.LazyStringArrayList(namespace_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string namespace = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getNamespaceList() {
+        return namespace_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string namespace = 2;</code>
+       */
+      public int getNamespaceCount() {
+        return namespace_.size();
+      }
+      /**
+       * <code>repeated string namespace = 2;</code>
+       */
+      public java.lang.String getNamespace(int index) {
+        return namespace_.get(index);
+      }
+      /**
+       * <code>repeated string namespace = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNamespaceBytes(int index) {
+        return namespace_.getByteString(index);
+      }
+      /**
+       * <code>repeated string namespace = 2;</code>
+       */
+      public Builder setNamespace(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNamespaceIsMutable();
+        namespace_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string namespace = 2;</code>
+       */
+      public Builder addNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNamespaceIsMutable();
+        namespace_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string namespace = 2;</code>
+       */
+      public Builder addAllNamespace(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureNamespaceIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, namespace_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string namespace = 2;</code>
+       */
+      public Builder clearNamespace() {
+        namespace_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string namespace = 2;</code>
+       */
+      public Builder addNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureNamespaceIsMutable();
+        namespace_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:GetNamespaceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:GetNamespaceResponse)
+    private static final com.cloud.pass.grpc.client.Client.GetNamespaceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cloud.pass.grpc.client.Client.GetNamespaceResponse();
+    }
+
+    public static com.cloud.pass.grpc.client.Client.GetNamespaceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetNamespaceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetNamespaceResponse>() {
+      @java.lang.Override
+      public GetNamespaceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetNamespaceResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetNamespaceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetNamespaceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cloud.pass.grpc.client.Client.GetNamespaceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PodInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:PodInfo)
       com.google.protobuf.MessageOrBuilder {
@@ -2906,6 +4314,16 @@ public final class Client {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_GetPodsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GetNamespaceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GetNamespaceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GetNamespaceResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GetNamespaceResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_PodInfo_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -2923,13 +4341,18 @@ public final class Client {
       "equest\022\033\n\003req\030\001 \001(\0132\016.CommonRequest\022\021\n\tn" +
       "amespace\030\002 \001(\t\"H\n\017GetPodsResponse\022\035\n\004res" +
       "p\030\001 \001(\0132\017.CommonResponse\022\026\n\004info\030\002 \003(\0132\010" +
-      ".PodInfo\"\177\n\007PodInfo\022\021\n\tnamespace\030\001 \001(\t\022\014" +
-      "\n\004name\030\002 \001(\t\022\021\n\ttotalPods\030\003 \001(\005\022\021\n\tready" +
-      "Pods\030\004 \001(\005\022\016\n\006status\030\005 \001(\t\022\020\n\010restarts\030\006" +
-      " \001(\005\022\013\n\003age\030\007 \001(\t2?\n\rKubectlClient\022.\n\007Ge" +
-      "tPods\022\017.GetPodsRequest\032\020.GetPodsResponse" +
-      "\"\000B7\n\032com.cloud.pass.grpc.clientZ\031kubect" +
-      "l-cli/client;clientb\006proto3"
+      ".PodInfo\"2\n\023GetNamespaceRequest\022\033\n\003req\030\001" +
+      " \001(\0132\016.CommonRequest\"H\n\024GetNamespaceResp" +
+      "onse\022\035\n\004resp\030\001 \001(\0132\017.CommonResponse\022\021\n\tn" +
+      "amespace\030\002 \003(\t\"\177\n\007PodInfo\022\021\n\tnamespace\030\001" +
+      " \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\ttotalPods\030\003 \001(\005\022\021\n" +
+      "\treadyPods\030\004 \001(\005\022\016\n\006status\030\005 \001(\t\022\020\n\010rest" +
+      "arts\030\006 \001(\005\022\013\n\003age\030\007 \001(\t2\177\n\rKubectlClient" +
+      "\022>\n\rGetNamespaces\022\024.GetNamespaceRequest\032" +
+      "\025.GetNamespaceResponse\"\000\022.\n\007GetPods\022\017.Ge" +
+      "tPodsRequest\032\020.GetPodsResponse\"\000B7\n\032com." +
+      "cloud.pass.grpc.clientZ\031kubectl-cli/clie" +
+      "nt;clientb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2956,8 +4379,20 @@ public final class Client {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetPodsResponse_descriptor,
         new java.lang.String[] { "Resp", "Info", });
-    internal_static_PodInfo_descriptor =
+    internal_static_GetNamespaceRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_GetNamespaceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GetNamespaceRequest_descriptor,
+        new java.lang.String[] { "Req", });
+    internal_static_GetNamespaceResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_GetNamespaceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GetNamespaceResponse_descriptor,
+        new java.lang.String[] { "Resp", "Namespace", });
+    internal_static_PodInfo_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_PodInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PodInfo_descriptor,
