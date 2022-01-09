@@ -15,6 +15,37 @@ public final class KubectlClientGrpc {
   public static final String SERVICE_NAME = "KubectlClient";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.cloud.pass.grpc.client.Client.GetServiceRequest,
+      com.cloud.pass.grpc.client.Client.GetServiceResponse> getGetServicesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetServices",
+      requestType = com.cloud.pass.grpc.client.Client.GetServiceRequest.class,
+      responseType = com.cloud.pass.grpc.client.Client.GetServiceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.cloud.pass.grpc.client.Client.GetServiceRequest,
+      com.cloud.pass.grpc.client.Client.GetServiceResponse> getGetServicesMethod() {
+    io.grpc.MethodDescriptor<com.cloud.pass.grpc.client.Client.GetServiceRequest, com.cloud.pass.grpc.client.Client.GetServiceResponse> getGetServicesMethod;
+    if ((getGetServicesMethod = KubectlClientGrpc.getGetServicesMethod) == null) {
+      synchronized (KubectlClientGrpc.class) {
+        if ((getGetServicesMethod = KubectlClientGrpc.getGetServicesMethod) == null) {
+          KubectlClientGrpc.getGetServicesMethod = getGetServicesMethod =
+              io.grpc.MethodDescriptor.<com.cloud.pass.grpc.client.Client.GetServiceRequest, com.cloud.pass.grpc.client.Client.GetServiceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetServices"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cloud.pass.grpc.client.Client.GetServiceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.cloud.pass.grpc.client.Client.GetServiceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new KubectlClientMethodDescriptorSupplier("GetServices"))
+              .build();
+        }
+      }
+    }
+    return getGetServicesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.cloud.pass.grpc.client.Client.GetNamespaceRequest,
       com.cloud.pass.grpc.client.Client.GetNamespaceResponse> getGetNamespacesMethod;
 
@@ -130,6 +161,13 @@ public final class KubectlClientGrpc {
      * Sends a greeting
      * </pre>
      */
+    public void getServices(com.cloud.pass.grpc.client.Client.GetServiceRequest request,
+        io.grpc.stub.StreamObserver<com.cloud.pass.grpc.client.Client.GetServiceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetServicesMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void getNamespaces(com.cloud.pass.grpc.client.Client.GetNamespaceRequest request,
         io.grpc.stub.StreamObserver<com.cloud.pass.grpc.client.Client.GetNamespaceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetNamespacesMethod(), responseObserver);
@@ -144,6 +182,13 @@ public final class KubectlClientGrpc {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getGetServicesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.cloud.pass.grpc.client.Client.GetServiceRequest,
+                com.cloud.pass.grpc.client.Client.GetServiceResponse>(
+                  this, METHODID_GET_SERVICES)))
           .addMethod(
             getGetNamespacesMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -181,6 +226,14 @@ public final class KubectlClientGrpc {
      * Sends a greeting
      * </pre>
      */
+    public void getServices(com.cloud.pass.grpc.client.Client.GetServiceRequest request,
+        io.grpc.stub.StreamObserver<com.cloud.pass.grpc.client.Client.GetServiceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetServicesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void getNamespaces(com.cloud.pass.grpc.client.Client.GetNamespaceRequest request,
         io.grpc.stub.StreamObserver<com.cloud.pass.grpc.client.Client.GetNamespaceResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -215,6 +268,13 @@ public final class KubectlClientGrpc {
      * Sends a greeting
      * </pre>
      */
+    public com.cloud.pass.grpc.client.Client.GetServiceResponse getServices(com.cloud.pass.grpc.client.Client.GetServiceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetServicesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public com.cloud.pass.grpc.client.Client.GetNamespaceResponse getNamespaces(com.cloud.pass.grpc.client.Client.GetNamespaceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetNamespacesMethod(), getCallOptions(), request);
@@ -247,6 +307,14 @@ public final class KubectlClientGrpc {
      * Sends a greeting
      * </pre>
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.cloud.pass.grpc.client.Client.GetServiceResponse> getServices(
+        com.cloud.pass.grpc.client.Client.GetServiceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetServicesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.cloud.pass.grpc.client.Client.GetNamespaceResponse> getNamespaces(
         com.cloud.pass.grpc.client.Client.GetNamespaceRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -262,8 +330,9 @@ public final class KubectlClientGrpc {
     }
   }
 
-  private static final int METHODID_GET_NAMESPACES = 0;
-  private static final int METHODID_GET_PODS = 1;
+  private static final int METHODID_GET_SERVICES = 0;
+  private static final int METHODID_GET_NAMESPACES = 1;
+  private static final int METHODID_GET_PODS = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -282,6 +351,10 @@ public final class KubectlClientGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_GET_SERVICES:
+          serviceImpl.getServices((com.cloud.pass.grpc.client.Client.GetServiceRequest) request,
+              (io.grpc.stub.StreamObserver<com.cloud.pass.grpc.client.Client.GetServiceResponse>) responseObserver);
+          break;
         case METHODID_GET_NAMESPACES:
           serviceImpl.getNamespaces((com.cloud.pass.grpc.client.Client.GetNamespaceRequest) request,
               (io.grpc.stub.StreamObserver<com.cloud.pass.grpc.client.Client.GetNamespaceResponse>) responseObserver);
@@ -351,6 +424,7 @@ public final class KubectlClientGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new KubectlClientFileDescriptorSupplier())
+              .addMethod(getGetServicesMethod())
               .addMethod(getGetNamespacesMethod())
               .addMethod(getGetPodsMethod())
               .build();

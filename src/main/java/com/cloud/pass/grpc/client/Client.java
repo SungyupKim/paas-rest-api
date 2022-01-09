@@ -1745,6 +1745,1156 @@ public final class Client {
 
   }
 
+  public interface PodInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PodInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string namespace = 1;</code>
+     */
+    java.lang.String getNamespace();
+    /**
+     * <code>string namespace = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNamespaceBytes();
+
+    /**
+     * <code>string name = 2;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>int32 totalPods = 3;</code>
+     */
+    int getTotalPods();
+
+    /**
+     * <code>int32 readyPods = 4;</code>
+     */
+    int getReadyPods();
+
+    /**
+     * <code>string status = 5;</code>
+     */
+    java.lang.String getStatus();
+    /**
+     * <code>string status = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+
+    /**
+     * <code>int32 restarts = 6;</code>
+     */
+    int getRestarts();
+
+    /**
+     * <code>string age = 7;</code>
+     */
+    java.lang.String getAge();
+    /**
+     * <code>string age = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getAgeBytes();
+  }
+  /**
+   * Protobuf type {@code PodInfo}
+   */
+  public  static final class PodInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PodInfo)
+      PodInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PodInfo.newBuilder() to construct.
+    private PodInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PodInfo() {
+      namespace_ = "";
+      name_ = "";
+      totalPods_ = 0;
+      readyPods_ = 0;
+      status_ = "";
+      restarts_ = 0;
+      age_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PodInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              namespace_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 24: {
+
+              totalPods_ = input.readInt32();
+              break;
+            }
+            case 32: {
+
+              readyPods_ = input.readInt32();
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              status_ = s;
+              break;
+            }
+            case 48: {
+
+              restarts_ = input.readInt32();
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              age_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cloud.pass.grpc.client.Client.internal_static_PodInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cloud.pass.grpc.client.Client.internal_static_PodInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cloud.pass.grpc.client.Client.PodInfo.class, com.cloud.pass.grpc.client.Client.PodInfo.Builder.class);
+    }
+
+    public static final int NAMESPACE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object namespace_;
+    /**
+     * <code>string namespace = 1;</code>
+     */
+    public java.lang.String getNamespace() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        namespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string namespace = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNamespaceBytes() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        namespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 2;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTALPODS_FIELD_NUMBER = 3;
+    private int totalPods_;
+    /**
+     * <code>int32 totalPods = 3;</code>
+     */
+    public int getTotalPods() {
+      return totalPods_;
+    }
+
+    public static final int READYPODS_FIELD_NUMBER = 4;
+    private int readyPods_;
+    /**
+     * <code>int32 readyPods = 4;</code>
+     */
+    public int getReadyPods() {
+      return readyPods_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 5;
+    private volatile java.lang.Object status_;
+    /**
+     * <code>string status = 5;</code>
+     */
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string status = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESTARTS_FIELD_NUMBER = 6;
+    private int restarts_;
+    /**
+     * <code>int32 restarts = 6;</code>
+     */
+    public int getRestarts() {
+      return restarts_;
+    }
+
+    public static final int AGE_FIELD_NUMBER = 7;
+    private volatile java.lang.Object age_;
+    /**
+     * <code>string age = 7;</code>
+     */
+    public java.lang.String getAge() {
+      java.lang.Object ref = age_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        age_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string age = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAgeBytes() {
+      java.lang.Object ref = age_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        age_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNamespaceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, namespace_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (totalPods_ != 0) {
+        output.writeInt32(3, totalPods_);
+      }
+      if (readyPods_ != 0) {
+        output.writeInt32(4, readyPods_);
+      }
+      if (!getStatusBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, status_);
+      }
+      if (restarts_ != 0) {
+        output.writeInt32(6, restarts_);
+      }
+      if (!getAgeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, age_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNamespaceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, namespace_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (totalPods_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, totalPods_);
+      }
+      if (readyPods_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, readyPods_);
+      }
+      if (!getStatusBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, status_);
+      }
+      if (restarts_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, restarts_);
+      }
+      if (!getAgeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, age_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cloud.pass.grpc.client.Client.PodInfo)) {
+        return super.equals(obj);
+      }
+      com.cloud.pass.grpc.client.Client.PodInfo other = (com.cloud.pass.grpc.client.Client.PodInfo) obj;
+
+      boolean result = true;
+      result = result && getNamespace()
+          .equals(other.getNamespace());
+      result = result && getName()
+          .equals(other.getName());
+      result = result && (getTotalPods()
+          == other.getTotalPods());
+      result = result && (getReadyPods()
+          == other.getReadyPods());
+      result = result && getStatus()
+          .equals(other.getStatus());
+      result = result && (getRestarts()
+          == other.getRestarts());
+      result = result && getAge()
+          .equals(other.getAge());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getNamespace().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TOTALPODS_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalPods();
+      hash = (37 * hash) + READYPODS_FIELD_NUMBER;
+      hash = (53 * hash) + getReadyPods();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
+      hash = (37 * hash) + RESTARTS_FIELD_NUMBER;
+      hash = (53 * hash) + getRestarts();
+      hash = (37 * hash) + AGE_FIELD_NUMBER;
+      hash = (53 * hash) + getAge().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.PodInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.PodInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cloud.pass.grpc.client.Client.PodInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code PodInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PodInfo)
+        com.cloud.pass.grpc.client.Client.PodInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cloud.pass.grpc.client.Client.internal_static_PodInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cloud.pass.grpc.client.Client.internal_static_PodInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cloud.pass.grpc.client.Client.PodInfo.class, com.cloud.pass.grpc.client.Client.PodInfo.Builder.class);
+      }
+
+      // Construct using com.cloud.pass.grpc.client.Client.PodInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        namespace_ = "";
+
+        name_ = "";
+
+        totalPods_ = 0;
+
+        readyPods_ = 0;
+
+        status_ = "";
+
+        restarts_ = 0;
+
+        age_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cloud.pass.grpc.client.Client.internal_static_PodInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.PodInfo getDefaultInstanceForType() {
+        return com.cloud.pass.grpc.client.Client.PodInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.PodInfo build() {
+        com.cloud.pass.grpc.client.Client.PodInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.PodInfo buildPartial() {
+        com.cloud.pass.grpc.client.Client.PodInfo result = new com.cloud.pass.grpc.client.Client.PodInfo(this);
+        result.namespace_ = namespace_;
+        result.name_ = name_;
+        result.totalPods_ = totalPods_;
+        result.readyPods_ = readyPods_;
+        result.status_ = status_;
+        result.restarts_ = restarts_;
+        result.age_ = age_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cloud.pass.grpc.client.Client.PodInfo) {
+          return mergeFrom((com.cloud.pass.grpc.client.Client.PodInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cloud.pass.grpc.client.Client.PodInfo other) {
+        if (other == com.cloud.pass.grpc.client.Client.PodInfo.getDefaultInstance()) return this;
+        if (!other.getNamespace().isEmpty()) {
+          namespace_ = other.namespace_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.getTotalPods() != 0) {
+          setTotalPods(other.getTotalPods());
+        }
+        if (other.getReadyPods() != 0) {
+          setReadyPods(other.getReadyPods());
+        }
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          onChanged();
+        }
+        if (other.getRestarts() != 0) {
+          setRestarts(other.getRestarts());
+        }
+        if (!other.getAge().isEmpty()) {
+          age_ = other.age_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.cloud.pass.grpc.client.Client.PodInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.cloud.pass.grpc.client.Client.PodInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object namespace_ = "";
+      /**
+       * <code>string namespace = 1;</code>
+       */
+      public java.lang.String getNamespace() {
+        java.lang.Object ref = namespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          namespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string namespace = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNamespaceBytes() {
+        java.lang.Object ref = namespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          namespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string namespace = 1;</code>
+       */
+      public Builder setNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string namespace = 1;</code>
+       */
+      public Builder clearNamespace() {
+        
+        namespace_ = getDefaultInstance().getNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string namespace = 1;</code>
+       */
+      public Builder setNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2;</code>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int totalPods_ ;
+      /**
+       * <code>int32 totalPods = 3;</code>
+       */
+      public int getTotalPods() {
+        return totalPods_;
+      }
+      /**
+       * <code>int32 totalPods = 3;</code>
+       */
+      public Builder setTotalPods(int value) {
+        
+        totalPods_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 totalPods = 3;</code>
+       */
+      public Builder clearTotalPods() {
+        
+        totalPods_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int readyPods_ ;
+      /**
+       * <code>int32 readyPods = 4;</code>
+       */
+      public int getReadyPods() {
+        return readyPods_;
+      }
+      /**
+       * <code>int32 readyPods = 4;</code>
+       */
+      public Builder setReadyPods(int value) {
+        
+        readyPods_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 readyPods = 4;</code>
+       */
+      public Builder clearReadyPods() {
+        
+        readyPods_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <code>string status = 5;</code>
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string status = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string status = 5;</code>
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 5;</code>
+       */
+      public Builder clearStatus() {
+        
+        status_ = getDefaultInstance().getStatus();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 5;</code>
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int restarts_ ;
+      /**
+       * <code>int32 restarts = 6;</code>
+       */
+      public int getRestarts() {
+        return restarts_;
+      }
+      /**
+       * <code>int32 restarts = 6;</code>
+       */
+      public Builder setRestarts(int value) {
+        
+        restarts_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 restarts = 6;</code>
+       */
+      public Builder clearRestarts() {
+        
+        restarts_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object age_ = "";
+      /**
+       * <code>string age = 7;</code>
+       */
+      public java.lang.String getAge() {
+        java.lang.Object ref = age_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          age_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string age = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAgeBytes() {
+        java.lang.Object ref = age_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          age_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string age = 7;</code>
+       */
+      public Builder setAge(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        age_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string age = 7;</code>
+       */
+      public Builder clearAge() {
+        
+        age_ = getDefaultInstance().getAge();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string age = 7;</code>
+       */
+      public Builder setAgeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        age_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:PodInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:PodInfo)
+    private static final com.cloud.pass.grpc.client.Client.PodInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cloud.pass.grpc.client.Client.PodInfo();
+    }
+
+    public static com.cloud.pass.grpc.client.Client.PodInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PodInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PodInfo>() {
+      @java.lang.Override
+      public PodInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PodInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PodInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PodInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cloud.pass.grpc.client.Client.PodInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GetNamespaceRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:GetNamespaceRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -3153,85 +4303,47 @@ public final class Client {
 
   }
 
-  public interface PodInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:PodInfo)
+  public interface GetServiceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GetServiceRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string namespace = 1;</code>
+     * <code>.CommonRequest req = 1;</code>
+     */
+    boolean hasReq();
+    /**
+     * <code>.CommonRequest req = 1;</code>
+     */
+    com.cloud.pass.grpc.common.Common.CommonRequest getReq();
+    /**
+     * <code>.CommonRequest req = 1;</code>
+     */
+    com.cloud.pass.grpc.common.Common.CommonRequestOrBuilder getReqOrBuilder();
+
+    /**
+     * <code>string namespace = 2;</code>
      */
     java.lang.String getNamespace();
     /**
-     * <code>string namespace = 1;</code>
+     * <code>string namespace = 2;</code>
      */
     com.google.protobuf.ByteString
         getNamespaceBytes();
-
-    /**
-     * <code>string name = 2;</code>
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>int32 totalPods = 3;</code>
-     */
-    int getTotalPods();
-
-    /**
-     * <code>int32 readyPods = 4;</code>
-     */
-    int getReadyPods();
-
-    /**
-     * <code>string status = 5;</code>
-     */
-    java.lang.String getStatus();
-    /**
-     * <code>string status = 5;</code>
-     */
-    com.google.protobuf.ByteString
-        getStatusBytes();
-
-    /**
-     * <code>int32 restarts = 6;</code>
-     */
-    int getRestarts();
-
-    /**
-     * <code>string age = 7;</code>
-     */
-    java.lang.String getAge();
-    /**
-     * <code>string age = 7;</code>
-     */
-    com.google.protobuf.ByteString
-        getAgeBytes();
   }
   /**
-   * Protobuf type {@code PodInfo}
+   * Protobuf type {@code GetServiceRequest}
    */
-  public  static final class PodInfo extends
+  public  static final class GetServiceRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:PodInfo)
-      PodInfoOrBuilder {
+      // @@protoc_insertion_point(message_implements:GetServiceRequest)
+      GetServiceRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PodInfo.newBuilder() to construct.
-    private PodInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use GetServiceRequest.newBuilder() to construct.
+    private GetServiceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PodInfo() {
+    private GetServiceRequest() {
       namespace_ = "";
-      name_ = "";
-      totalPods_ = 0;
-      readyPods_ = 0;
-      status_ = "";
-      restarts_ = 0;
-      age_ = "";
     }
 
     @java.lang.Override
@@ -3239,7 +4351,7 @@ public final class Client {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PodInfo(
+    private GetServiceRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3259,42 +4371,22 @@ public final class Client {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.cloud.pass.grpc.common.Common.CommonRequest.Builder subBuilder = null;
+              if (req_ != null) {
+                subBuilder = req_.toBuilder();
+              }
+              req_ = input.readMessage(com.cloud.pass.grpc.common.Common.CommonRequest.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(req_);
+                req_ = subBuilder.buildPartial();
+              }
 
-              namespace_ = s;
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              name_ = s;
-              break;
-            }
-            case 24: {
-
-              totalPods_ = input.readInt32();
-              break;
-            }
-            case 32: {
-
-              readyPods_ = input.readInt32();
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              status_ = s;
-              break;
-            }
-            case 48: {
-
-              restarts_ = input.readInt32();
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              age_ = s;
+              namespace_ = s;
               break;
             }
             default: {
@@ -3318,21 +4410,42 @@ public final class Client {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.cloud.pass.grpc.client.Client.internal_static_PodInfo_descriptor;
+      return com.cloud.pass.grpc.client.Client.internal_static_GetServiceRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.cloud.pass.grpc.client.Client.internal_static_PodInfo_fieldAccessorTable
+      return com.cloud.pass.grpc.client.Client.internal_static_GetServiceRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.cloud.pass.grpc.client.Client.PodInfo.class, com.cloud.pass.grpc.client.Client.PodInfo.Builder.class);
+              com.cloud.pass.grpc.client.Client.GetServiceRequest.class, com.cloud.pass.grpc.client.Client.GetServiceRequest.Builder.class);
     }
 
-    public static final int NAMESPACE_FIELD_NUMBER = 1;
+    public static final int REQ_FIELD_NUMBER = 1;
+    private com.cloud.pass.grpc.common.Common.CommonRequest req_;
+    /**
+     * <code>.CommonRequest req = 1;</code>
+     */
+    public boolean hasReq() {
+      return req_ != null;
+    }
+    /**
+     * <code>.CommonRequest req = 1;</code>
+     */
+    public com.cloud.pass.grpc.common.Common.CommonRequest getReq() {
+      return req_ == null ? com.cloud.pass.grpc.common.Common.CommonRequest.getDefaultInstance() : req_;
+    }
+    /**
+     * <code>.CommonRequest req = 1;</code>
+     */
+    public com.cloud.pass.grpc.common.Common.CommonRequestOrBuilder getReqOrBuilder() {
+      return getReq();
+    }
+
+    public static final int NAMESPACE_FIELD_NUMBER = 2;
     private volatile java.lang.Object namespace_;
     /**
-     * <code>string namespace = 1;</code>
+     * <code>string namespace = 2;</code>
      */
     public java.lang.String getNamespace() {
       java.lang.Object ref = namespace_;
@@ -3347,7 +4460,7 @@ public final class Client {
       }
     }
     /**
-     * <code>string namespace = 1;</code>
+     * <code>string namespace = 2;</code>
      */
     public com.google.protobuf.ByteString
         getNamespaceBytes() {
@@ -3357,135 +4470,6 @@ public final class Client {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         namespace_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 2;</code>
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TOTALPODS_FIELD_NUMBER = 3;
-    private int totalPods_;
-    /**
-     * <code>int32 totalPods = 3;</code>
-     */
-    public int getTotalPods() {
-      return totalPods_;
-    }
-
-    public static final int READYPODS_FIELD_NUMBER = 4;
-    private int readyPods_;
-    /**
-     * <code>int32 readyPods = 4;</code>
-     */
-    public int getReadyPods() {
-      return readyPods_;
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 5;
-    private volatile java.lang.Object status_;
-    /**
-     * <code>string status = 5;</code>
-     */
-    public java.lang.String getStatus() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        status_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string status = 5;</code>
-     */
-    public com.google.protobuf.ByteString
-        getStatusBytes() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        status_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int RESTARTS_FIELD_NUMBER = 6;
-    private int restarts_;
-    /**
-     * <code>int32 restarts = 6;</code>
-     */
-    public int getRestarts() {
-      return restarts_;
-    }
-
-    public static final int AGE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object age_;
-    /**
-     * <code>string age = 7;</code>
-     */
-    public java.lang.String getAge() {
-      java.lang.Object ref = age_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        age_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string age = 7;</code>
-     */
-    public com.google.protobuf.ByteString
-        getAgeBytes() {
-      java.lang.Object ref = age_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        age_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3506,26 +4490,11 @@ public final class Client {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (req_ != null) {
+        output.writeMessage(1, getReq());
+      }
       if (!getNamespaceBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, namespace_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (totalPods_ != 0) {
-        output.writeInt32(3, totalPods_);
-      }
-      if (readyPods_ != 0) {
-        output.writeInt32(4, readyPods_);
-      }
-      if (!getStatusBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, status_);
-      }
-      if (restarts_ != 0) {
-        output.writeInt32(6, restarts_);
-      }
-      if (!getAgeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, age_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, namespace_);
       }
       unknownFields.writeTo(output);
     }
@@ -3536,29 +4505,12 @@ public final class Client {
       if (size != -1) return size;
 
       size = 0;
+      if (req_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getReq());
+      }
       if (!getNamespaceBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, namespace_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (totalPods_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, totalPods_);
-      }
-      if (readyPods_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, readyPods_);
-      }
-      if (!getStatusBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, status_);
-      }
-      if (restarts_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, restarts_);
-      }
-      if (!getAgeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, age_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, namespace_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3570,26 +4522,19 @@ public final class Client {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.cloud.pass.grpc.client.Client.PodInfo)) {
+      if (!(obj instanceof com.cloud.pass.grpc.client.Client.GetServiceRequest)) {
         return super.equals(obj);
       }
-      com.cloud.pass.grpc.client.Client.PodInfo other = (com.cloud.pass.grpc.client.Client.PodInfo) obj;
+      com.cloud.pass.grpc.client.Client.GetServiceRequest other = (com.cloud.pass.grpc.client.Client.GetServiceRequest) obj;
 
       boolean result = true;
+      result = result && (hasReq() == other.hasReq());
+      if (hasReq()) {
+        result = result && getReq()
+            .equals(other.getReq());
+      }
       result = result && getNamespace()
           .equals(other.getNamespace());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getTotalPods()
-          == other.getTotalPods());
-      result = result && (getReadyPods()
-          == other.getReadyPods());
-      result = result && getStatus()
-          .equals(other.getStatus());
-      result = result && (getRestarts()
-          == other.getRestarts());
-      result = result && getAge()
-          .equals(other.getAge());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3601,88 +4546,80 @@ public final class Client {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasReq()) {
+        hash = (37 * hash) + REQ_FIELD_NUMBER;
+        hash = (53 * hash) + getReq().hashCode();
+      }
       hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
       hash = (53 * hash) + getNamespace().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + TOTALPODS_FIELD_NUMBER;
-      hash = (53 * hash) + getTotalPods();
-      hash = (37 * hash) + READYPODS_FIELD_NUMBER;
-      hash = (53 * hash) + getReadyPods();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + getStatus().hashCode();
-      hash = (37 * hash) + RESTARTS_FIELD_NUMBER;
-      hash = (53 * hash) + getRestarts();
-      hash = (37 * hash) + AGE_FIELD_NUMBER;
-      hash = (53 * hash) + getAge().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(byte[] data)
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(java.io.InputStream input)
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.cloud.pass.grpc.client.Client.PodInfo parseDelimitedFrom(java.io.InputStream input)
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.cloud.pass.grpc.client.Client.PodInfo parseDelimitedFrom(
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.cloud.pass.grpc.client.Client.PodInfo parseFrom(
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3695,7 +4632,7 @@ public final class Client {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.cloud.pass.grpc.client.Client.PodInfo prototype) {
+    public static Builder newBuilder(com.cloud.pass.grpc.client.Client.GetServiceRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3711,26 +4648,26 @@ public final class Client {
       return builder;
     }
     /**
-     * Protobuf type {@code PodInfo}
+     * Protobuf type {@code GetServiceRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:PodInfo)
-        com.cloud.pass.grpc.client.Client.PodInfoOrBuilder {
+        // @@protoc_insertion_point(builder_implements:GetServiceRequest)
+        com.cloud.pass.grpc.client.Client.GetServiceRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.cloud.pass.grpc.client.Client.internal_static_PodInfo_descriptor;
+        return com.cloud.pass.grpc.client.Client.internal_static_GetServiceRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.cloud.pass.grpc.client.Client.internal_static_PodInfo_fieldAccessorTable
+        return com.cloud.pass.grpc.client.Client.internal_static_GetServiceRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.cloud.pass.grpc.client.Client.PodInfo.class, com.cloud.pass.grpc.client.Client.PodInfo.Builder.class);
+                com.cloud.pass.grpc.client.Client.GetServiceRequest.class, com.cloud.pass.grpc.client.Client.GetServiceRequest.Builder.class);
       }
 
-      // Construct using com.cloud.pass.grpc.client.Client.PodInfo.newBuilder()
+      // Construct using com.cloud.pass.grpc.client.Client.GetServiceRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3748,19 +4685,13 @@ public final class Client {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (reqBuilder_ == null) {
+          req_ = null;
+        } else {
+          req_ = null;
+          reqBuilder_ = null;
+        }
         namespace_ = "";
-
-        name_ = "";
-
-        totalPods_ = 0;
-
-        readyPods_ = 0;
-
-        status_ = "";
-
-        restarts_ = 0;
-
-        age_ = "";
 
         return this;
       }
@@ -3768,17 +4699,17 @@ public final class Client {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.cloud.pass.grpc.client.Client.internal_static_PodInfo_descriptor;
+        return com.cloud.pass.grpc.client.Client.internal_static_GetServiceRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.cloud.pass.grpc.client.Client.PodInfo getDefaultInstanceForType() {
-        return com.cloud.pass.grpc.client.Client.PodInfo.getDefaultInstance();
+      public com.cloud.pass.grpc.client.Client.GetServiceRequest getDefaultInstanceForType() {
+        return com.cloud.pass.grpc.client.Client.GetServiceRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.cloud.pass.grpc.client.Client.PodInfo build() {
-        com.cloud.pass.grpc.client.Client.PodInfo result = buildPartial();
+      public com.cloud.pass.grpc.client.Client.GetServiceRequest build() {
+        com.cloud.pass.grpc.client.Client.GetServiceRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3786,15 +4717,14 @@ public final class Client {
       }
 
       @java.lang.Override
-      public com.cloud.pass.grpc.client.Client.PodInfo buildPartial() {
-        com.cloud.pass.grpc.client.Client.PodInfo result = new com.cloud.pass.grpc.client.Client.PodInfo(this);
+      public com.cloud.pass.grpc.client.Client.GetServiceRequest buildPartial() {
+        com.cloud.pass.grpc.client.Client.GetServiceRequest result = new com.cloud.pass.grpc.client.Client.GetServiceRequest(this);
+        if (reqBuilder_ == null) {
+          result.req_ = req_;
+        } else {
+          result.req_ = reqBuilder_.build();
+        }
         result.namespace_ = namespace_;
-        result.name_ = name_;
-        result.totalPods_ = totalPods_;
-        result.readyPods_ = readyPods_;
-        result.status_ = status_;
-        result.restarts_ = restarts_;
-        result.age_ = age_;
         onBuilt();
         return result;
       }
@@ -3833,39 +4763,21 @@ public final class Client {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.cloud.pass.grpc.client.Client.PodInfo) {
-          return mergeFrom((com.cloud.pass.grpc.client.Client.PodInfo)other);
+        if (other instanceof com.cloud.pass.grpc.client.Client.GetServiceRequest) {
+          return mergeFrom((com.cloud.pass.grpc.client.Client.GetServiceRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.cloud.pass.grpc.client.Client.PodInfo other) {
-        if (other == com.cloud.pass.grpc.client.Client.PodInfo.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.cloud.pass.grpc.client.Client.GetServiceRequest other) {
+        if (other == com.cloud.pass.grpc.client.Client.GetServiceRequest.getDefaultInstance()) return this;
+        if (other.hasReq()) {
+          mergeReq(other.getReq());
+        }
         if (!other.getNamespace().isEmpty()) {
           namespace_ = other.namespace_;
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (other.getTotalPods() != 0) {
-          setTotalPods(other.getTotalPods());
-        }
-        if (other.getReadyPods() != 0) {
-          setReadyPods(other.getReadyPods());
-        }
-        if (!other.getStatus().isEmpty()) {
-          status_ = other.status_;
-          onChanged();
-        }
-        if (other.getRestarts() != 0) {
-          setRestarts(other.getRestarts());
-        }
-        if (!other.getAge().isEmpty()) {
-          age_ = other.age_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3883,11 +4795,11 @@ public final class Client {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.cloud.pass.grpc.client.Client.PodInfo parsedMessage = null;
+        com.cloud.pass.grpc.client.Client.GetServiceRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.cloud.pass.grpc.client.Client.PodInfo) e.getUnfinishedMessage();
+          parsedMessage = (com.cloud.pass.grpc.client.Client.GetServiceRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3897,9 +4809,126 @@ public final class Client {
         return this;
       }
 
+      private com.cloud.pass.grpc.common.Common.CommonRequest req_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cloud.pass.grpc.common.Common.CommonRequest, com.cloud.pass.grpc.common.Common.CommonRequest.Builder, com.cloud.pass.grpc.common.Common.CommonRequestOrBuilder> reqBuilder_;
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public boolean hasReq() {
+        return reqBuilder_ != null || req_ != null;
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public com.cloud.pass.grpc.common.Common.CommonRequest getReq() {
+        if (reqBuilder_ == null) {
+          return req_ == null ? com.cloud.pass.grpc.common.Common.CommonRequest.getDefaultInstance() : req_;
+        } else {
+          return reqBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public Builder setReq(com.cloud.pass.grpc.common.Common.CommonRequest value) {
+        if (reqBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          req_ = value;
+          onChanged();
+        } else {
+          reqBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public Builder setReq(
+          com.cloud.pass.grpc.common.Common.CommonRequest.Builder builderForValue) {
+        if (reqBuilder_ == null) {
+          req_ = builderForValue.build();
+          onChanged();
+        } else {
+          reqBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public Builder mergeReq(com.cloud.pass.grpc.common.Common.CommonRequest value) {
+        if (reqBuilder_ == null) {
+          if (req_ != null) {
+            req_ =
+              com.cloud.pass.grpc.common.Common.CommonRequest.newBuilder(req_).mergeFrom(value).buildPartial();
+          } else {
+            req_ = value;
+          }
+          onChanged();
+        } else {
+          reqBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public Builder clearReq() {
+        if (reqBuilder_ == null) {
+          req_ = null;
+          onChanged();
+        } else {
+          req_ = null;
+          reqBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public com.cloud.pass.grpc.common.Common.CommonRequest.Builder getReqBuilder() {
+        
+        onChanged();
+        return getReqFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      public com.cloud.pass.grpc.common.Common.CommonRequestOrBuilder getReqOrBuilder() {
+        if (reqBuilder_ != null) {
+          return reqBuilder_.getMessageOrBuilder();
+        } else {
+          return req_ == null ?
+              com.cloud.pass.grpc.common.Common.CommonRequest.getDefaultInstance() : req_;
+        }
+      }
+      /**
+       * <code>.CommonRequest req = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cloud.pass.grpc.common.Common.CommonRequest, com.cloud.pass.grpc.common.Common.CommonRequest.Builder, com.cloud.pass.grpc.common.Common.CommonRequestOrBuilder> 
+          getReqFieldBuilder() {
+        if (reqBuilder_ == null) {
+          reqBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cloud.pass.grpc.common.Common.CommonRequest, com.cloud.pass.grpc.common.Common.CommonRequest.Builder, com.cloud.pass.grpc.common.Common.CommonRequestOrBuilder>(
+                  getReq(),
+                  getParentForChildren(),
+                  isClean());
+          req_ = null;
+        }
+        return reqBuilder_;
+      }
+
       private java.lang.Object namespace_ = "";
       /**
-       * <code>string namespace = 1;</code>
+       * <code>string namespace = 2;</code>
        */
       public java.lang.String getNamespace() {
         java.lang.Object ref = namespace_;
@@ -3914,7 +4943,7 @@ public final class Client {
         }
       }
       /**
-       * <code>string namespace = 1;</code>
+       * <code>string namespace = 2;</code>
        */
       public com.google.protobuf.ByteString
           getNamespaceBytes() {
@@ -3930,7 +4959,7 @@ public final class Client {
         }
       }
       /**
-       * <code>string namespace = 1;</code>
+       * <code>string namespace = 2;</code>
        */
       public Builder setNamespace(
           java.lang.String value) {
@@ -3943,7 +4972,7 @@ public final class Client {
         return this;
       }
       /**
-       * <code>string namespace = 1;</code>
+       * <code>string namespace = 2;</code>
        */
       public Builder clearNamespace() {
         
@@ -3952,7 +4981,7 @@ public final class Client {
         return this;
       }
       /**
-       * <code>string namespace = 1;</code>
+       * <code>string namespace = 2;</code>
        */
       public Builder setNamespaceBytes(
           com.google.protobuf.ByteString value) {
@@ -3962,291 +4991,6 @@ public final class Client {
   checkByteStringIsUtf8(value);
         
         namespace_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 2;</code>
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 2;</code>
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 2;</code>
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 2;</code>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int totalPods_ ;
-      /**
-       * <code>int32 totalPods = 3;</code>
-       */
-      public int getTotalPods() {
-        return totalPods_;
-      }
-      /**
-       * <code>int32 totalPods = 3;</code>
-       */
-      public Builder setTotalPods(int value) {
-        
-        totalPods_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 totalPods = 3;</code>
-       */
-      public Builder clearTotalPods() {
-        
-        totalPods_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int readyPods_ ;
-      /**
-       * <code>int32 readyPods = 4;</code>
-       */
-      public int getReadyPods() {
-        return readyPods_;
-      }
-      /**
-       * <code>int32 readyPods = 4;</code>
-       */
-      public Builder setReadyPods(int value) {
-        
-        readyPods_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 readyPods = 4;</code>
-       */
-      public Builder clearReadyPods() {
-        
-        readyPods_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object status_ = "";
-      /**
-       * <code>string status = 5;</code>
-       */
-      public java.lang.String getStatus() {
-        java.lang.Object ref = status_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          status_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string status = 5;</code>
-       */
-      public com.google.protobuf.ByteString
-          getStatusBytes() {
-        java.lang.Object ref = status_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          status_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string status = 5;</code>
-       */
-      public Builder setStatus(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        status_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string status = 5;</code>
-       */
-      public Builder clearStatus() {
-        
-        status_ = getDefaultInstance().getStatus();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string status = 5;</code>
-       */
-      public Builder setStatusBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        status_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int restarts_ ;
-      /**
-       * <code>int32 restarts = 6;</code>
-       */
-      public int getRestarts() {
-        return restarts_;
-      }
-      /**
-       * <code>int32 restarts = 6;</code>
-       */
-      public Builder setRestarts(int value) {
-        
-        restarts_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 restarts = 6;</code>
-       */
-      public Builder clearRestarts() {
-        
-        restarts_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object age_ = "";
-      /**
-       * <code>string age = 7;</code>
-       */
-      public java.lang.String getAge() {
-        java.lang.Object ref = age_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          age_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string age = 7;</code>
-       */
-      public com.google.protobuf.ByteString
-          getAgeBytes() {
-        java.lang.Object ref = age_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          age_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string age = 7;</code>
-       */
-      public Builder setAge(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        age_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string age = 7;</code>
-       */
-      public Builder clearAge() {
-        
-        age_ = getDefaultInstance().getAge();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string age = 7;</code>
-       */
-      public Builder setAgeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        age_ = value;
         onChanged();
         return this;
       }
@@ -4263,41 +5007,3355 @@ public final class Client {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:PodInfo)
+      // @@protoc_insertion_point(builder_scope:GetServiceRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:PodInfo)
-    private static final com.cloud.pass.grpc.client.Client.PodInfo DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:GetServiceRequest)
+    private static final com.cloud.pass.grpc.client.Client.GetServiceRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.cloud.pass.grpc.client.Client.PodInfo();
+      DEFAULT_INSTANCE = new com.cloud.pass.grpc.client.Client.GetServiceRequest();
     }
 
-    public static com.cloud.pass.grpc.client.Client.PodInfo getDefaultInstance() {
+    public static com.cloud.pass.grpc.client.Client.GetServiceRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PodInfo>
-        PARSER = new com.google.protobuf.AbstractParser<PodInfo>() {
+    private static final com.google.protobuf.Parser<GetServiceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetServiceRequest>() {
       @java.lang.Override
-      public PodInfo parsePartialFrom(
+      public GetServiceRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PodInfo(input, extensionRegistry);
+        return new GetServiceRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PodInfo> parser() {
+    public static com.google.protobuf.Parser<GetServiceRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PodInfo> getParserForType() {
+    public com.google.protobuf.Parser<GetServiceRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.cloud.pass.grpc.client.Client.PodInfo getDefaultInstanceForType() {
+    public com.cloud.pass.grpc.client.Client.GetServiceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetServiceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GetServiceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.CommonResponse resp = 1;</code>
+     */
+    boolean hasResp();
+    /**
+     * <code>.CommonResponse resp = 1;</code>
+     */
+    com.cloud.pass.grpc.common.Common.CommonResponse getResp();
+    /**
+     * <code>.CommonResponse resp = 1;</code>
+     */
+    com.cloud.pass.grpc.common.Common.CommonResponseOrBuilder getRespOrBuilder();
+
+    /**
+     * <code>repeated .ServiceInfo services = 2;</code>
+     */
+    java.util.List<com.cloud.pass.grpc.client.Client.ServiceInfo> 
+        getServicesList();
+    /**
+     * <code>repeated .ServiceInfo services = 2;</code>
+     */
+    com.cloud.pass.grpc.client.Client.ServiceInfo getServices(int index);
+    /**
+     * <code>repeated .ServiceInfo services = 2;</code>
+     */
+    int getServicesCount();
+    /**
+     * <code>repeated .ServiceInfo services = 2;</code>
+     */
+    java.util.List<? extends com.cloud.pass.grpc.client.Client.ServiceInfoOrBuilder> 
+        getServicesOrBuilderList();
+    /**
+     * <code>repeated .ServiceInfo services = 2;</code>
+     */
+    com.cloud.pass.grpc.client.Client.ServiceInfoOrBuilder getServicesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code GetServiceResponse}
+   */
+  public  static final class GetServiceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:GetServiceResponse)
+      GetServiceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetServiceResponse.newBuilder() to construct.
+    private GetServiceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetServiceResponse() {
+      services_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetServiceResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.cloud.pass.grpc.common.Common.CommonResponse.Builder subBuilder = null;
+              if (resp_ != null) {
+                subBuilder = resp_.toBuilder();
+              }
+              resp_ = input.readMessage(com.cloud.pass.grpc.common.Common.CommonResponse.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resp_);
+                resp_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                services_ = new java.util.ArrayList<com.cloud.pass.grpc.client.Client.ServiceInfo>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              services_.add(
+                  input.readMessage(com.cloud.pass.grpc.client.Client.ServiceInfo.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          services_ = java.util.Collections.unmodifiableList(services_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cloud.pass.grpc.client.Client.internal_static_GetServiceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cloud.pass.grpc.client.Client.internal_static_GetServiceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cloud.pass.grpc.client.Client.GetServiceResponse.class, com.cloud.pass.grpc.client.Client.GetServiceResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RESP_FIELD_NUMBER = 1;
+    private com.cloud.pass.grpc.common.Common.CommonResponse resp_;
+    /**
+     * <code>.CommonResponse resp = 1;</code>
+     */
+    public boolean hasResp() {
+      return resp_ != null;
+    }
+    /**
+     * <code>.CommonResponse resp = 1;</code>
+     */
+    public com.cloud.pass.grpc.common.Common.CommonResponse getResp() {
+      return resp_ == null ? com.cloud.pass.grpc.common.Common.CommonResponse.getDefaultInstance() : resp_;
+    }
+    /**
+     * <code>.CommonResponse resp = 1;</code>
+     */
+    public com.cloud.pass.grpc.common.Common.CommonResponseOrBuilder getRespOrBuilder() {
+      return getResp();
+    }
+
+    public static final int SERVICES_FIELD_NUMBER = 2;
+    private java.util.List<com.cloud.pass.grpc.client.Client.ServiceInfo> services_;
+    /**
+     * <code>repeated .ServiceInfo services = 2;</code>
+     */
+    public java.util.List<com.cloud.pass.grpc.client.Client.ServiceInfo> getServicesList() {
+      return services_;
+    }
+    /**
+     * <code>repeated .ServiceInfo services = 2;</code>
+     */
+    public java.util.List<? extends com.cloud.pass.grpc.client.Client.ServiceInfoOrBuilder> 
+        getServicesOrBuilderList() {
+      return services_;
+    }
+    /**
+     * <code>repeated .ServiceInfo services = 2;</code>
+     */
+    public int getServicesCount() {
+      return services_.size();
+    }
+    /**
+     * <code>repeated .ServiceInfo services = 2;</code>
+     */
+    public com.cloud.pass.grpc.client.Client.ServiceInfo getServices(int index) {
+      return services_.get(index);
+    }
+    /**
+     * <code>repeated .ServiceInfo services = 2;</code>
+     */
+    public com.cloud.pass.grpc.client.Client.ServiceInfoOrBuilder getServicesOrBuilder(
+        int index) {
+      return services_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (resp_ != null) {
+        output.writeMessage(1, getResp());
+      }
+      for (int i = 0; i < services_.size(); i++) {
+        output.writeMessage(2, services_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (resp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getResp());
+      }
+      for (int i = 0; i < services_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, services_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cloud.pass.grpc.client.Client.GetServiceResponse)) {
+        return super.equals(obj);
+      }
+      com.cloud.pass.grpc.client.Client.GetServiceResponse other = (com.cloud.pass.grpc.client.Client.GetServiceResponse) obj;
+
+      boolean result = true;
+      result = result && (hasResp() == other.hasResp());
+      if (hasResp()) {
+        result = result && getResp()
+            .equals(other.getResp());
+      }
+      result = result && getServicesList()
+          .equals(other.getServicesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResp()) {
+        hash = (37 * hash) + RESP_FIELD_NUMBER;
+        hash = (53 * hash) + getResp().hashCode();
+      }
+      if (getServicesCount() > 0) {
+        hash = (37 * hash) + SERVICES_FIELD_NUMBER;
+        hash = (53 * hash) + getServicesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cloud.pass.grpc.client.Client.GetServiceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code GetServiceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:GetServiceResponse)
+        com.cloud.pass.grpc.client.Client.GetServiceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cloud.pass.grpc.client.Client.internal_static_GetServiceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cloud.pass.grpc.client.Client.internal_static_GetServiceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cloud.pass.grpc.client.Client.GetServiceResponse.class, com.cloud.pass.grpc.client.Client.GetServiceResponse.Builder.class);
+      }
+
+      // Construct using com.cloud.pass.grpc.client.Client.GetServiceResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getServicesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (respBuilder_ == null) {
+          resp_ = null;
+        } else {
+          resp_ = null;
+          respBuilder_ = null;
+        }
+        if (servicesBuilder_ == null) {
+          services_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          servicesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cloud.pass.grpc.client.Client.internal_static_GetServiceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.GetServiceResponse getDefaultInstanceForType() {
+        return com.cloud.pass.grpc.client.Client.GetServiceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.GetServiceResponse build() {
+        com.cloud.pass.grpc.client.Client.GetServiceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.GetServiceResponse buildPartial() {
+        com.cloud.pass.grpc.client.Client.GetServiceResponse result = new com.cloud.pass.grpc.client.Client.GetServiceResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (respBuilder_ == null) {
+          result.resp_ = resp_;
+        } else {
+          result.resp_ = respBuilder_.build();
+        }
+        if (servicesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            services_ = java.util.Collections.unmodifiableList(services_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.services_ = services_;
+        } else {
+          result.services_ = servicesBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cloud.pass.grpc.client.Client.GetServiceResponse) {
+          return mergeFrom((com.cloud.pass.grpc.client.Client.GetServiceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cloud.pass.grpc.client.Client.GetServiceResponse other) {
+        if (other == com.cloud.pass.grpc.client.Client.GetServiceResponse.getDefaultInstance()) return this;
+        if (other.hasResp()) {
+          mergeResp(other.getResp());
+        }
+        if (servicesBuilder_ == null) {
+          if (!other.services_.isEmpty()) {
+            if (services_.isEmpty()) {
+              services_ = other.services_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureServicesIsMutable();
+              services_.addAll(other.services_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.services_.isEmpty()) {
+            if (servicesBuilder_.isEmpty()) {
+              servicesBuilder_.dispose();
+              servicesBuilder_ = null;
+              services_ = other.services_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              servicesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getServicesFieldBuilder() : null;
+            } else {
+              servicesBuilder_.addAllMessages(other.services_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.cloud.pass.grpc.client.Client.GetServiceResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.cloud.pass.grpc.client.Client.GetServiceResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cloud.pass.grpc.common.Common.CommonResponse resp_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cloud.pass.grpc.common.Common.CommonResponse, com.cloud.pass.grpc.common.Common.CommonResponse.Builder, com.cloud.pass.grpc.common.Common.CommonResponseOrBuilder> respBuilder_;
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public boolean hasResp() {
+        return respBuilder_ != null || resp_ != null;
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public com.cloud.pass.grpc.common.Common.CommonResponse getResp() {
+        if (respBuilder_ == null) {
+          return resp_ == null ? com.cloud.pass.grpc.common.Common.CommonResponse.getDefaultInstance() : resp_;
+        } else {
+          return respBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public Builder setResp(com.cloud.pass.grpc.common.Common.CommonResponse value) {
+        if (respBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resp_ = value;
+          onChanged();
+        } else {
+          respBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public Builder setResp(
+          com.cloud.pass.grpc.common.Common.CommonResponse.Builder builderForValue) {
+        if (respBuilder_ == null) {
+          resp_ = builderForValue.build();
+          onChanged();
+        } else {
+          respBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public Builder mergeResp(com.cloud.pass.grpc.common.Common.CommonResponse value) {
+        if (respBuilder_ == null) {
+          if (resp_ != null) {
+            resp_ =
+              com.cloud.pass.grpc.common.Common.CommonResponse.newBuilder(resp_).mergeFrom(value).buildPartial();
+          } else {
+            resp_ = value;
+          }
+          onChanged();
+        } else {
+          respBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public Builder clearResp() {
+        if (respBuilder_ == null) {
+          resp_ = null;
+          onChanged();
+        } else {
+          resp_ = null;
+          respBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public com.cloud.pass.grpc.common.Common.CommonResponse.Builder getRespBuilder() {
+        
+        onChanged();
+        return getRespFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      public com.cloud.pass.grpc.common.Common.CommonResponseOrBuilder getRespOrBuilder() {
+        if (respBuilder_ != null) {
+          return respBuilder_.getMessageOrBuilder();
+        } else {
+          return resp_ == null ?
+              com.cloud.pass.grpc.common.Common.CommonResponse.getDefaultInstance() : resp_;
+        }
+      }
+      /**
+       * <code>.CommonResponse resp = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cloud.pass.grpc.common.Common.CommonResponse, com.cloud.pass.grpc.common.Common.CommonResponse.Builder, com.cloud.pass.grpc.common.Common.CommonResponseOrBuilder> 
+          getRespFieldBuilder() {
+        if (respBuilder_ == null) {
+          respBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cloud.pass.grpc.common.Common.CommonResponse, com.cloud.pass.grpc.common.Common.CommonResponse.Builder, com.cloud.pass.grpc.common.Common.CommonResponseOrBuilder>(
+                  getResp(),
+                  getParentForChildren(),
+                  isClean());
+          resp_ = null;
+        }
+        return respBuilder_;
+      }
+
+      private java.util.List<com.cloud.pass.grpc.client.Client.ServiceInfo> services_ =
+        java.util.Collections.emptyList();
+      private void ensureServicesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          services_ = new java.util.ArrayList<com.cloud.pass.grpc.client.Client.ServiceInfo>(services_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cloud.pass.grpc.client.Client.ServiceInfo, com.cloud.pass.grpc.client.Client.ServiceInfo.Builder, com.cloud.pass.grpc.client.Client.ServiceInfoOrBuilder> servicesBuilder_;
+
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public java.util.List<com.cloud.pass.grpc.client.Client.ServiceInfo> getServicesList() {
+        if (servicesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(services_);
+        } else {
+          return servicesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public int getServicesCount() {
+        if (servicesBuilder_ == null) {
+          return services_.size();
+        } else {
+          return servicesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public com.cloud.pass.grpc.client.Client.ServiceInfo getServices(int index) {
+        if (servicesBuilder_ == null) {
+          return services_.get(index);
+        } else {
+          return servicesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public Builder setServices(
+          int index, com.cloud.pass.grpc.client.Client.ServiceInfo value) {
+        if (servicesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServicesIsMutable();
+          services_.set(index, value);
+          onChanged();
+        } else {
+          servicesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public Builder setServices(
+          int index, com.cloud.pass.grpc.client.Client.ServiceInfo.Builder builderForValue) {
+        if (servicesBuilder_ == null) {
+          ensureServicesIsMutable();
+          services_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          servicesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public Builder addServices(com.cloud.pass.grpc.client.Client.ServiceInfo value) {
+        if (servicesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServicesIsMutable();
+          services_.add(value);
+          onChanged();
+        } else {
+          servicesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public Builder addServices(
+          int index, com.cloud.pass.grpc.client.Client.ServiceInfo value) {
+        if (servicesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServicesIsMutable();
+          services_.add(index, value);
+          onChanged();
+        } else {
+          servicesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public Builder addServices(
+          com.cloud.pass.grpc.client.Client.ServiceInfo.Builder builderForValue) {
+        if (servicesBuilder_ == null) {
+          ensureServicesIsMutable();
+          services_.add(builderForValue.build());
+          onChanged();
+        } else {
+          servicesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public Builder addServices(
+          int index, com.cloud.pass.grpc.client.Client.ServiceInfo.Builder builderForValue) {
+        if (servicesBuilder_ == null) {
+          ensureServicesIsMutable();
+          services_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          servicesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public Builder addAllServices(
+          java.lang.Iterable<? extends com.cloud.pass.grpc.client.Client.ServiceInfo> values) {
+        if (servicesBuilder_ == null) {
+          ensureServicesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, services_);
+          onChanged();
+        } else {
+          servicesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public Builder clearServices() {
+        if (servicesBuilder_ == null) {
+          services_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          servicesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public Builder removeServices(int index) {
+        if (servicesBuilder_ == null) {
+          ensureServicesIsMutable();
+          services_.remove(index);
+          onChanged();
+        } else {
+          servicesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public com.cloud.pass.grpc.client.Client.ServiceInfo.Builder getServicesBuilder(
+          int index) {
+        return getServicesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public com.cloud.pass.grpc.client.Client.ServiceInfoOrBuilder getServicesOrBuilder(
+          int index) {
+        if (servicesBuilder_ == null) {
+          return services_.get(index);  } else {
+          return servicesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public java.util.List<? extends com.cloud.pass.grpc.client.Client.ServiceInfoOrBuilder> 
+           getServicesOrBuilderList() {
+        if (servicesBuilder_ != null) {
+          return servicesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(services_);
+        }
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public com.cloud.pass.grpc.client.Client.ServiceInfo.Builder addServicesBuilder() {
+        return getServicesFieldBuilder().addBuilder(
+            com.cloud.pass.grpc.client.Client.ServiceInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public com.cloud.pass.grpc.client.Client.ServiceInfo.Builder addServicesBuilder(
+          int index) {
+        return getServicesFieldBuilder().addBuilder(
+            index, com.cloud.pass.grpc.client.Client.ServiceInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ServiceInfo services = 2;</code>
+       */
+      public java.util.List<com.cloud.pass.grpc.client.Client.ServiceInfo.Builder> 
+           getServicesBuilderList() {
+        return getServicesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cloud.pass.grpc.client.Client.ServiceInfo, com.cloud.pass.grpc.client.Client.ServiceInfo.Builder, com.cloud.pass.grpc.client.Client.ServiceInfoOrBuilder> 
+          getServicesFieldBuilder() {
+        if (servicesBuilder_ == null) {
+          servicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cloud.pass.grpc.client.Client.ServiceInfo, com.cloud.pass.grpc.client.Client.ServiceInfo.Builder, com.cloud.pass.grpc.client.Client.ServiceInfoOrBuilder>(
+                  services_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          services_ = null;
+        }
+        return servicesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:GetServiceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:GetServiceResponse)
+    private static final com.cloud.pass.grpc.client.Client.GetServiceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cloud.pass.grpc.client.Client.GetServiceResponse();
+    }
+
+    public static com.cloud.pass.grpc.client.Client.GetServiceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetServiceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetServiceResponse>() {
+      @java.lang.Override
+      public GetServiceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetServiceResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetServiceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetServiceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cloud.pass.grpc.client.Client.GetServiceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PortInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PortInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 port = 1;</code>
+     */
+    int getPort();
+
+    /**
+     * <code>int32 targetPort = 2;</code>
+     */
+    int getTargetPort();
+
+    /**
+     * <code>string protocol = 3;</code>
+     */
+    java.lang.String getProtocol();
+    /**
+     * <code>string protocol = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getProtocolBytes();
+  }
+  /**
+   * Protobuf type {@code PortInfo}
+   */
+  public  static final class PortInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PortInfo)
+      PortInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PortInfo.newBuilder() to construct.
+    private PortInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PortInfo() {
+      port_ = 0;
+      targetPort_ = 0;
+      protocol_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PortInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              port_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              targetPort_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              protocol_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cloud.pass.grpc.client.Client.internal_static_PortInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cloud.pass.grpc.client.Client.internal_static_PortInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cloud.pass.grpc.client.Client.PortInfo.class, com.cloud.pass.grpc.client.Client.PortInfo.Builder.class);
+    }
+
+    public static final int PORT_FIELD_NUMBER = 1;
+    private int port_;
+    /**
+     * <code>int32 port = 1;</code>
+     */
+    public int getPort() {
+      return port_;
+    }
+
+    public static final int TARGETPORT_FIELD_NUMBER = 2;
+    private int targetPort_;
+    /**
+     * <code>int32 targetPort = 2;</code>
+     */
+    public int getTargetPort() {
+      return targetPort_;
+    }
+
+    public static final int PROTOCOL_FIELD_NUMBER = 3;
+    private volatile java.lang.Object protocol_;
+    /**
+     * <code>string protocol = 3;</code>
+     */
+    public java.lang.String getProtocol() {
+      java.lang.Object ref = protocol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        protocol_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string protocol = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getProtocolBytes() {
+      java.lang.Object ref = protocol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        protocol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (port_ != 0) {
+        output.writeInt32(1, port_);
+      }
+      if (targetPort_ != 0) {
+        output.writeInt32(2, targetPort_);
+      }
+      if (!getProtocolBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, protocol_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (port_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, port_);
+      }
+      if (targetPort_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, targetPort_);
+      }
+      if (!getProtocolBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, protocol_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cloud.pass.grpc.client.Client.PortInfo)) {
+        return super.equals(obj);
+      }
+      com.cloud.pass.grpc.client.Client.PortInfo other = (com.cloud.pass.grpc.client.Client.PortInfo) obj;
+
+      boolean result = true;
+      result = result && (getPort()
+          == other.getPort());
+      result = result && (getTargetPort()
+          == other.getTargetPort());
+      result = result && getProtocol()
+          .equals(other.getProtocol());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PORT_FIELD_NUMBER;
+      hash = (53 * hash) + getPort();
+      hash = (37 * hash) + TARGETPORT_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetPort();
+      hash = (37 * hash) + PROTOCOL_FIELD_NUMBER;
+      hash = (53 * hash) + getProtocol().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cloud.pass.grpc.client.Client.PortInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.PortInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.PortInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.PortInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.PortInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.PortInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.PortInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.PortInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.PortInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.PortInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.PortInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.PortInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cloud.pass.grpc.client.Client.PortInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code PortInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PortInfo)
+        com.cloud.pass.grpc.client.Client.PortInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cloud.pass.grpc.client.Client.internal_static_PortInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cloud.pass.grpc.client.Client.internal_static_PortInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cloud.pass.grpc.client.Client.PortInfo.class, com.cloud.pass.grpc.client.Client.PortInfo.Builder.class);
+      }
+
+      // Construct using com.cloud.pass.grpc.client.Client.PortInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        port_ = 0;
+
+        targetPort_ = 0;
+
+        protocol_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cloud.pass.grpc.client.Client.internal_static_PortInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.PortInfo getDefaultInstanceForType() {
+        return com.cloud.pass.grpc.client.Client.PortInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.PortInfo build() {
+        com.cloud.pass.grpc.client.Client.PortInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.PortInfo buildPartial() {
+        com.cloud.pass.grpc.client.Client.PortInfo result = new com.cloud.pass.grpc.client.Client.PortInfo(this);
+        result.port_ = port_;
+        result.targetPort_ = targetPort_;
+        result.protocol_ = protocol_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cloud.pass.grpc.client.Client.PortInfo) {
+          return mergeFrom((com.cloud.pass.grpc.client.Client.PortInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cloud.pass.grpc.client.Client.PortInfo other) {
+        if (other == com.cloud.pass.grpc.client.Client.PortInfo.getDefaultInstance()) return this;
+        if (other.getPort() != 0) {
+          setPort(other.getPort());
+        }
+        if (other.getTargetPort() != 0) {
+          setTargetPort(other.getTargetPort());
+        }
+        if (!other.getProtocol().isEmpty()) {
+          protocol_ = other.protocol_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.cloud.pass.grpc.client.Client.PortInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.cloud.pass.grpc.client.Client.PortInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int port_ ;
+      /**
+       * <code>int32 port = 1;</code>
+       */
+      public int getPort() {
+        return port_;
+      }
+      /**
+       * <code>int32 port = 1;</code>
+       */
+      public Builder setPort(int value) {
+        
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 port = 1;</code>
+       */
+      public Builder clearPort() {
+        
+        port_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int targetPort_ ;
+      /**
+       * <code>int32 targetPort = 2;</code>
+       */
+      public int getTargetPort() {
+        return targetPort_;
+      }
+      /**
+       * <code>int32 targetPort = 2;</code>
+       */
+      public Builder setTargetPort(int value) {
+        
+        targetPort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 targetPort = 2;</code>
+       */
+      public Builder clearTargetPort() {
+        
+        targetPort_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object protocol_ = "";
+      /**
+       * <code>string protocol = 3;</code>
+       */
+      public java.lang.String getProtocol() {
+        java.lang.Object ref = protocol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          protocol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string protocol = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getProtocolBytes() {
+        java.lang.Object ref = protocol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          protocol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string protocol = 3;</code>
+       */
+      public Builder setProtocol(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        protocol_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string protocol = 3;</code>
+       */
+      public Builder clearProtocol() {
+        
+        protocol_ = getDefaultInstance().getProtocol();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string protocol = 3;</code>
+       */
+      public Builder setProtocolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        protocol_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:PortInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:PortInfo)
+    private static final com.cloud.pass.grpc.client.Client.PortInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cloud.pass.grpc.client.Client.PortInfo();
+    }
+
+    public static com.cloud.pass.grpc.client.Client.PortInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PortInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PortInfo>() {
+      @java.lang.Override
+      public PortInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PortInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PortInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PortInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cloud.pass.grpc.client.Client.PortInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ServiceInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ServiceInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string type = 2;</code>
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>string clusterIp = 3;</code>
+     */
+    java.lang.String getClusterIp();
+    /**
+     * <code>string clusterIp = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIpBytes();
+
+    /**
+     * <code>repeated string externalIp = 4;</code>
+     */
+    java.util.List<java.lang.String>
+        getExternalIpList();
+    /**
+     * <code>repeated string externalIp = 4;</code>
+     */
+    int getExternalIpCount();
+    /**
+     * <code>repeated string externalIp = 4;</code>
+     */
+    java.lang.String getExternalIp(int index);
+    /**
+     * <code>repeated string externalIp = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getExternalIpBytes(int index);
+
+    /**
+     * <code>repeated .PortInfo ports = 5;</code>
+     */
+    java.util.List<com.cloud.pass.grpc.client.Client.PortInfo> 
+        getPortsList();
+    /**
+     * <code>repeated .PortInfo ports = 5;</code>
+     */
+    com.cloud.pass.grpc.client.Client.PortInfo getPorts(int index);
+    /**
+     * <code>repeated .PortInfo ports = 5;</code>
+     */
+    int getPortsCount();
+    /**
+     * <code>repeated .PortInfo ports = 5;</code>
+     */
+    java.util.List<? extends com.cloud.pass.grpc.client.Client.PortInfoOrBuilder> 
+        getPortsOrBuilderList();
+    /**
+     * <code>repeated .PortInfo ports = 5;</code>
+     */
+    com.cloud.pass.grpc.client.Client.PortInfoOrBuilder getPortsOrBuilder(
+        int index);
+
+    /**
+     * <code>string age = 6;</code>
+     */
+    java.lang.String getAge();
+    /**
+     * <code>string age = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getAgeBytes();
+
+    /**
+     * <code>string labelSelector = 7;</code>
+     */
+    java.lang.String getLabelSelector();
+    /**
+     * <code>string labelSelector = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getLabelSelectorBytes();
+  }
+  /**
+   * Protobuf type {@code ServiceInfo}
+   */
+  public  static final class ServiceInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ServiceInfo)
+      ServiceInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ServiceInfo.newBuilder() to construct.
+    private ServiceInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ServiceInfo() {
+      name_ = "";
+      type_ = "";
+      clusterIp_ = "";
+      externalIp_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      ports_ = java.util.Collections.emptyList();
+      age_ = "";
+      labelSelector_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ServiceInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              type_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterIp_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                externalIp_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              externalIp_.add(s);
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                ports_ = new java.util.ArrayList<com.cloud.pass.grpc.client.Client.PortInfo>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              ports_.add(
+                  input.readMessage(com.cloud.pass.grpc.client.Client.PortInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              age_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              labelSelector_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          externalIp_ = externalIp_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          ports_ = java.util.Collections.unmodifiableList(ports_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cloud.pass.grpc.client.Client.internal_static_ServiceInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cloud.pass.grpc.client.Client.internal_static_ServiceInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cloud.pass.grpc.client.Client.ServiceInfo.class, com.cloud.pass.grpc.client.Client.ServiceInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object type_;
+    /**
+     * <code>string type = 2;</code>
+     */
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLUSTERIP_FIELD_NUMBER = 3;
+    private volatile java.lang.Object clusterIp_;
+    /**
+     * <code>string clusterIp = 3;</code>
+     */
+    public java.lang.String getClusterIp() {
+      java.lang.Object ref = clusterIp_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterIp_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string clusterIp = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIpBytes() {
+      java.lang.Object ref = clusterIp_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterIp_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXTERNALIP_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList externalIp_;
+    /**
+     * <code>repeated string externalIp = 4;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getExternalIpList() {
+      return externalIp_;
+    }
+    /**
+     * <code>repeated string externalIp = 4;</code>
+     */
+    public int getExternalIpCount() {
+      return externalIp_.size();
+    }
+    /**
+     * <code>repeated string externalIp = 4;</code>
+     */
+    public java.lang.String getExternalIp(int index) {
+      return externalIp_.get(index);
+    }
+    /**
+     * <code>repeated string externalIp = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getExternalIpBytes(int index) {
+      return externalIp_.getByteString(index);
+    }
+
+    public static final int PORTS_FIELD_NUMBER = 5;
+    private java.util.List<com.cloud.pass.grpc.client.Client.PortInfo> ports_;
+    /**
+     * <code>repeated .PortInfo ports = 5;</code>
+     */
+    public java.util.List<com.cloud.pass.grpc.client.Client.PortInfo> getPortsList() {
+      return ports_;
+    }
+    /**
+     * <code>repeated .PortInfo ports = 5;</code>
+     */
+    public java.util.List<? extends com.cloud.pass.grpc.client.Client.PortInfoOrBuilder> 
+        getPortsOrBuilderList() {
+      return ports_;
+    }
+    /**
+     * <code>repeated .PortInfo ports = 5;</code>
+     */
+    public int getPortsCount() {
+      return ports_.size();
+    }
+    /**
+     * <code>repeated .PortInfo ports = 5;</code>
+     */
+    public com.cloud.pass.grpc.client.Client.PortInfo getPorts(int index) {
+      return ports_.get(index);
+    }
+    /**
+     * <code>repeated .PortInfo ports = 5;</code>
+     */
+    public com.cloud.pass.grpc.client.Client.PortInfoOrBuilder getPortsOrBuilder(
+        int index) {
+      return ports_.get(index);
+    }
+
+    public static final int AGE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object age_;
+    /**
+     * <code>string age = 6;</code>
+     */
+    public java.lang.String getAge() {
+      java.lang.Object ref = age_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        age_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string age = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAgeBytes() {
+      java.lang.Object ref = age_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        age_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELSELECTOR_FIELD_NUMBER = 7;
+    private volatile java.lang.Object labelSelector_;
+    /**
+     * <code>string labelSelector = 7;</code>
+     */
+    public java.lang.String getLabelSelector() {
+      java.lang.Object ref = labelSelector_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        labelSelector_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string labelSelector = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLabelSelectorBytes() {
+      java.lang.Object ref = labelSelector_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        labelSelector_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!getTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
+      }
+      if (!getClusterIpBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, clusterIp_);
+      }
+      for (int i = 0; i < externalIp_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, externalIp_.getRaw(i));
+      }
+      for (int i = 0; i < ports_.size(); i++) {
+        output.writeMessage(5, ports_.get(i));
+      }
+      if (!getAgeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, age_);
+      }
+      if (!getLabelSelectorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, labelSelector_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!getTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
+      }
+      if (!getClusterIpBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, clusterIp_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < externalIp_.size(); i++) {
+          dataSize += computeStringSizeNoTag(externalIp_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getExternalIpList().size();
+      }
+      for (int i = 0; i < ports_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, ports_.get(i));
+      }
+      if (!getAgeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, age_);
+      }
+      if (!getLabelSelectorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, labelSelector_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cloud.pass.grpc.client.Client.ServiceInfo)) {
+        return super.equals(obj);
+      }
+      com.cloud.pass.grpc.client.Client.ServiceInfo other = (com.cloud.pass.grpc.client.Client.ServiceInfo) obj;
+
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getType()
+          .equals(other.getType());
+      result = result && getClusterIp()
+          .equals(other.getClusterIp());
+      result = result && getExternalIpList()
+          .equals(other.getExternalIpList());
+      result = result && getPortsList()
+          .equals(other.getPortsList());
+      result = result && getAge()
+          .equals(other.getAge());
+      result = result && getLabelSelector()
+          .equals(other.getLabelSelector());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + CLUSTERIP_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterIp().hashCode();
+      if (getExternalIpCount() > 0) {
+        hash = (37 * hash) + EXTERNALIP_FIELD_NUMBER;
+        hash = (53 * hash) + getExternalIpList().hashCode();
+      }
+      if (getPortsCount() > 0) {
+        hash = (37 * hash) + PORTS_FIELD_NUMBER;
+        hash = (53 * hash) + getPortsList().hashCode();
+      }
+      hash = (37 * hash) + AGE_FIELD_NUMBER;
+      hash = (53 * hash) + getAge().hashCode();
+      hash = (37 * hash) + LABELSELECTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getLabelSelector().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cloud.pass.grpc.client.Client.ServiceInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ServiceInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ServiceInfo)
+        com.cloud.pass.grpc.client.Client.ServiceInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cloud.pass.grpc.client.Client.internal_static_ServiceInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cloud.pass.grpc.client.Client.internal_static_ServiceInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cloud.pass.grpc.client.Client.ServiceInfo.class, com.cloud.pass.grpc.client.Client.ServiceInfo.Builder.class);
+      }
+
+      // Construct using com.cloud.pass.grpc.client.Client.ServiceInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPortsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        type_ = "";
+
+        clusterIp_ = "";
+
+        externalIp_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (portsBuilder_ == null) {
+          ports_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          portsBuilder_.clear();
+        }
+        age_ = "";
+
+        labelSelector_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cloud.pass.grpc.client.Client.internal_static_ServiceInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.ServiceInfo getDefaultInstanceForType() {
+        return com.cloud.pass.grpc.client.Client.ServiceInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.ServiceInfo build() {
+        com.cloud.pass.grpc.client.Client.ServiceInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cloud.pass.grpc.client.Client.ServiceInfo buildPartial() {
+        com.cloud.pass.grpc.client.Client.ServiceInfo result = new com.cloud.pass.grpc.client.Client.ServiceInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.name_ = name_;
+        result.type_ = type_;
+        result.clusterIp_ = clusterIp_;
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          externalIp_ = externalIp_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.externalIp_ = externalIp_;
+        if (portsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            ports_ = java.util.Collections.unmodifiableList(ports_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.ports_ = ports_;
+        } else {
+          result.ports_ = portsBuilder_.build();
+        }
+        result.age_ = age_;
+        result.labelSelector_ = labelSelector_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cloud.pass.grpc.client.Client.ServiceInfo) {
+          return mergeFrom((com.cloud.pass.grpc.client.Client.ServiceInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cloud.pass.grpc.client.Client.ServiceInfo other) {
+        if (other == com.cloud.pass.grpc.client.Client.ServiceInfo.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          onChanged();
+        }
+        if (!other.getClusterIp().isEmpty()) {
+          clusterIp_ = other.clusterIp_;
+          onChanged();
+        }
+        if (!other.externalIp_.isEmpty()) {
+          if (externalIp_.isEmpty()) {
+            externalIp_ = other.externalIp_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureExternalIpIsMutable();
+            externalIp_.addAll(other.externalIp_);
+          }
+          onChanged();
+        }
+        if (portsBuilder_ == null) {
+          if (!other.ports_.isEmpty()) {
+            if (ports_.isEmpty()) {
+              ports_ = other.ports_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensurePortsIsMutable();
+              ports_.addAll(other.ports_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ports_.isEmpty()) {
+            if (portsBuilder_.isEmpty()) {
+              portsBuilder_.dispose();
+              portsBuilder_ = null;
+              ports_ = other.ports_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              portsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPortsFieldBuilder() : null;
+            } else {
+              portsBuilder_.addAllMessages(other.ports_);
+            }
+          }
+        }
+        if (!other.getAge().isEmpty()) {
+          age_ = other.age_;
+          onChanged();
+        }
+        if (!other.getLabelSelector().isEmpty()) {
+          labelSelector_ = other.labelSelector_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.cloud.pass.grpc.client.Client.ServiceInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.cloud.pass.grpc.client.Client.ServiceInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 2;</code>
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 2;</code>
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 2;</code>
+       */
+      public Builder clearType() {
+        
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 2;</code>
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clusterIp_ = "";
+      /**
+       * <code>string clusterIp = 3;</code>
+       */
+      public java.lang.String getClusterIp() {
+        java.lang.Object ref = clusterIp_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterIp_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string clusterIp = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIpBytes() {
+        java.lang.Object ref = clusterIp_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterIp_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string clusterIp = 3;</code>
+       */
+      public Builder setClusterIp(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string clusterIp = 3;</code>
+       */
+      public Builder clearClusterIp() {
+        
+        clusterIp_ = getDefaultInstance().getClusterIp();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string clusterIp = 3;</code>
+       */
+      public Builder setClusterIpBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterIp_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList externalIp_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureExternalIpIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          externalIp_ = new com.google.protobuf.LazyStringArrayList(externalIp_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated string externalIp = 4;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getExternalIpList() {
+        return externalIp_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string externalIp = 4;</code>
+       */
+      public int getExternalIpCount() {
+        return externalIp_.size();
+      }
+      /**
+       * <code>repeated string externalIp = 4;</code>
+       */
+      public java.lang.String getExternalIp(int index) {
+        return externalIp_.get(index);
+      }
+      /**
+       * <code>repeated string externalIp = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getExternalIpBytes(int index) {
+        return externalIp_.getByteString(index);
+      }
+      /**
+       * <code>repeated string externalIp = 4;</code>
+       */
+      public Builder setExternalIp(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExternalIpIsMutable();
+        externalIp_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string externalIp = 4;</code>
+       */
+      public Builder addExternalIp(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExternalIpIsMutable();
+        externalIp_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string externalIp = 4;</code>
+       */
+      public Builder addAllExternalIp(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureExternalIpIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, externalIp_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string externalIp = 4;</code>
+       */
+      public Builder clearExternalIp() {
+        externalIp_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string externalIp = 4;</code>
+       */
+      public Builder addExternalIpBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureExternalIpIsMutable();
+        externalIp_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cloud.pass.grpc.client.Client.PortInfo> ports_ =
+        java.util.Collections.emptyList();
+      private void ensurePortsIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          ports_ = new java.util.ArrayList<com.cloud.pass.grpc.client.Client.PortInfo>(ports_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cloud.pass.grpc.client.Client.PortInfo, com.cloud.pass.grpc.client.Client.PortInfo.Builder, com.cloud.pass.grpc.client.Client.PortInfoOrBuilder> portsBuilder_;
+
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public java.util.List<com.cloud.pass.grpc.client.Client.PortInfo> getPortsList() {
+        if (portsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ports_);
+        } else {
+          return portsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public int getPortsCount() {
+        if (portsBuilder_ == null) {
+          return ports_.size();
+        } else {
+          return portsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public com.cloud.pass.grpc.client.Client.PortInfo getPorts(int index) {
+        if (portsBuilder_ == null) {
+          return ports_.get(index);
+        } else {
+          return portsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public Builder setPorts(
+          int index, com.cloud.pass.grpc.client.Client.PortInfo value) {
+        if (portsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePortsIsMutable();
+          ports_.set(index, value);
+          onChanged();
+        } else {
+          portsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public Builder setPorts(
+          int index, com.cloud.pass.grpc.client.Client.PortInfo.Builder builderForValue) {
+        if (portsBuilder_ == null) {
+          ensurePortsIsMutable();
+          ports_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          portsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public Builder addPorts(com.cloud.pass.grpc.client.Client.PortInfo value) {
+        if (portsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePortsIsMutable();
+          ports_.add(value);
+          onChanged();
+        } else {
+          portsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public Builder addPorts(
+          int index, com.cloud.pass.grpc.client.Client.PortInfo value) {
+        if (portsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePortsIsMutable();
+          ports_.add(index, value);
+          onChanged();
+        } else {
+          portsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public Builder addPorts(
+          com.cloud.pass.grpc.client.Client.PortInfo.Builder builderForValue) {
+        if (portsBuilder_ == null) {
+          ensurePortsIsMutable();
+          ports_.add(builderForValue.build());
+          onChanged();
+        } else {
+          portsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public Builder addPorts(
+          int index, com.cloud.pass.grpc.client.Client.PortInfo.Builder builderForValue) {
+        if (portsBuilder_ == null) {
+          ensurePortsIsMutable();
+          ports_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          portsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public Builder addAllPorts(
+          java.lang.Iterable<? extends com.cloud.pass.grpc.client.Client.PortInfo> values) {
+        if (portsBuilder_ == null) {
+          ensurePortsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ports_);
+          onChanged();
+        } else {
+          portsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public Builder clearPorts() {
+        if (portsBuilder_ == null) {
+          ports_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          portsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public Builder removePorts(int index) {
+        if (portsBuilder_ == null) {
+          ensurePortsIsMutable();
+          ports_.remove(index);
+          onChanged();
+        } else {
+          portsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public com.cloud.pass.grpc.client.Client.PortInfo.Builder getPortsBuilder(
+          int index) {
+        return getPortsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public com.cloud.pass.grpc.client.Client.PortInfoOrBuilder getPortsOrBuilder(
+          int index) {
+        if (portsBuilder_ == null) {
+          return ports_.get(index);  } else {
+          return portsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public java.util.List<? extends com.cloud.pass.grpc.client.Client.PortInfoOrBuilder> 
+           getPortsOrBuilderList() {
+        if (portsBuilder_ != null) {
+          return portsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ports_);
+        }
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public com.cloud.pass.grpc.client.Client.PortInfo.Builder addPortsBuilder() {
+        return getPortsFieldBuilder().addBuilder(
+            com.cloud.pass.grpc.client.Client.PortInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public com.cloud.pass.grpc.client.Client.PortInfo.Builder addPortsBuilder(
+          int index) {
+        return getPortsFieldBuilder().addBuilder(
+            index, com.cloud.pass.grpc.client.Client.PortInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .PortInfo ports = 5;</code>
+       */
+      public java.util.List<com.cloud.pass.grpc.client.Client.PortInfo.Builder> 
+           getPortsBuilderList() {
+        return getPortsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cloud.pass.grpc.client.Client.PortInfo, com.cloud.pass.grpc.client.Client.PortInfo.Builder, com.cloud.pass.grpc.client.Client.PortInfoOrBuilder> 
+          getPortsFieldBuilder() {
+        if (portsBuilder_ == null) {
+          portsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cloud.pass.grpc.client.Client.PortInfo, com.cloud.pass.grpc.client.Client.PortInfo.Builder, com.cloud.pass.grpc.client.Client.PortInfoOrBuilder>(
+                  ports_,
+                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  getParentForChildren(),
+                  isClean());
+          ports_ = null;
+        }
+        return portsBuilder_;
+      }
+
+      private java.lang.Object age_ = "";
+      /**
+       * <code>string age = 6;</code>
+       */
+      public java.lang.String getAge() {
+        java.lang.Object ref = age_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          age_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string age = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAgeBytes() {
+        java.lang.Object ref = age_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          age_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string age = 6;</code>
+       */
+      public Builder setAge(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        age_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string age = 6;</code>
+       */
+      public Builder clearAge() {
+        
+        age_ = getDefaultInstance().getAge();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string age = 6;</code>
+       */
+      public Builder setAgeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        age_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object labelSelector_ = "";
+      /**
+       * <code>string labelSelector = 7;</code>
+       */
+      public java.lang.String getLabelSelector() {
+        java.lang.Object ref = labelSelector_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          labelSelector_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string labelSelector = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLabelSelectorBytes() {
+        java.lang.Object ref = labelSelector_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          labelSelector_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string labelSelector = 7;</code>
+       */
+      public Builder setLabelSelector(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        labelSelector_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string labelSelector = 7;</code>
+       */
+      public Builder clearLabelSelector() {
+        
+        labelSelector_ = getDefaultInstance().getLabelSelector();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string labelSelector = 7;</code>
+       */
+      public Builder setLabelSelectorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        labelSelector_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ServiceInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:ServiceInfo)
+    private static final com.cloud.pass.grpc.client.Client.ServiceInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cloud.pass.grpc.client.Client.ServiceInfo();
+    }
+
+    public static com.cloud.pass.grpc.client.Client.ServiceInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ServiceInfo>
+        PARSER = new com.google.protobuf.AbstractParser<ServiceInfo>() {
+      @java.lang.Override
+      public ServiceInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ServiceInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ServiceInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ServiceInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cloud.pass.grpc.client.Client.ServiceInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4314,6 +8372,11 @@ public final class Client {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_GetPodsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PodInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PodInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_GetNamespaceRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -4324,10 +8387,25 @@ public final class Client {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_GetNamespaceResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_PodInfo_descriptor;
+    internal_static_GetServiceRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_PodInfo_fieldAccessorTable;
+      internal_static_GetServiceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GetServiceResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GetServiceResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PortInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PortInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ServiceInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ServiceInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4341,18 +8419,28 @@ public final class Client {
       "equest\022\033\n\003req\030\001 \001(\0132\016.CommonRequest\022\021\n\tn" +
       "amespace\030\002 \001(\t\"H\n\017GetPodsResponse\022\035\n\004res" +
       "p\030\001 \001(\0132\017.CommonResponse\022\026\n\004info\030\002 \003(\0132\010" +
-      ".PodInfo\"2\n\023GetNamespaceRequest\022\033\n\003req\030\001" +
-      " \001(\0132\016.CommonRequest\"H\n\024GetNamespaceResp" +
-      "onse\022\035\n\004resp\030\001 \001(\0132\017.CommonResponse\022\021\n\tn" +
-      "amespace\030\002 \003(\t\"\177\n\007PodInfo\022\021\n\tnamespace\030\001" +
-      " \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\ttotalPods\030\003 \001(\005\022\021\n" +
-      "\treadyPods\030\004 \001(\005\022\016\n\006status\030\005 \001(\t\022\020\n\010rest" +
-      "arts\030\006 \001(\005\022\013\n\003age\030\007 \001(\t2\177\n\rKubectlClient" +
-      "\022>\n\rGetNamespaces\022\024.GetNamespaceRequest\032" +
-      "\025.GetNamespaceResponse\"\000\022.\n\007GetPods\022\017.Ge" +
-      "tPodsRequest\032\020.GetPodsResponse\"\000B7\n\032com." +
-      "cloud.pass.grpc.clientZ\031kubectl-cli/clie" +
-      "nt;clientb\006proto3"
+      ".PodInfo\"\177\n\007PodInfo\022\021\n\tnamespace\030\001 \001(\t\022\014" +
+      "\n\004name\030\002 \001(\t\022\021\n\ttotalPods\030\003 \001(\005\022\021\n\tready" +
+      "Pods\030\004 \001(\005\022\016\n\006status\030\005 \001(\t\022\020\n\010restarts\030\006" +
+      " \001(\005\022\013\n\003age\030\007 \001(\t\"2\n\023GetNamespaceRequest" +
+      "\022\033\n\003req\030\001 \001(\0132\016.CommonRequest\"H\n\024GetName" +
+      "spaceResponse\022\035\n\004resp\030\001 \001(\0132\017.CommonResp" +
+      "onse\022\021\n\tnamespace\030\002 \003(\t\"C\n\021GetServiceReq" +
+      "uest\022\033\n\003req\030\001 \001(\0132\016.CommonRequest\022\021\n\tnam" +
+      "espace\030\002 \001(\t\"S\n\022GetServiceResponse\022\035\n\004re" +
+      "sp\030\001 \001(\0132\017.CommonResponse\022\036\n\010services\030\002 " +
+      "\003(\0132\014.ServiceInfo\">\n\010PortInfo\022\014\n\004port\030\001 " +
+      "\001(\005\022\022\n\ntargetPort\030\002 \001(\005\022\020\n\010protocol\030\003 \001(" +
+      "\t\"\216\001\n\013ServiceInfo\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030" +
+      "\002 \001(\t\022\021\n\tclusterIp\030\003 \001(\t\022\022\n\nexternalIp\030\004" +
+      " \003(\t\022\030\n\005ports\030\005 \003(\0132\t.PortInfo\022\013\n\003age\030\006 " +
+      "\001(\t\022\025\n\rlabelSelector\030\007 \001(\t2\271\001\n\rKubectlCl" +
+      "ient\0228\n\013GetServices\022\022.GetServiceRequest\032" +
+      "\023.GetServiceResponse\"\000\022>\n\rGetNamespaces\022" +
+      "\024.GetNamespaceRequest\032\025.GetNamespaceResp" +
+      "onse\"\000\022.\n\007GetPods\022\017.GetPodsRequest\032\020.Get" +
+      "PodsResponse\"\000B7\n\032com.cloud.pass.grpc.cl" +
+      "ientZ\031kubectl-cli/client;clientb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4379,24 +8467,48 @@ public final class Client {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetPodsResponse_descriptor,
         new java.lang.String[] { "Resp", "Info", });
-    internal_static_GetNamespaceRequest_descriptor =
+    internal_static_PodInfo_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_PodInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PodInfo_descriptor,
+        new java.lang.String[] { "Namespace", "Name", "TotalPods", "ReadyPods", "Status", "Restarts", "Age", });
+    internal_static_GetNamespaceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_GetNamespaceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetNamespaceRequest_descriptor,
         new java.lang.String[] { "Req", });
     internal_static_GetNamespaceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_GetNamespaceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetNamespaceResponse_descriptor,
         new java.lang.String[] { "Resp", "Namespace", });
-    internal_static_PodInfo_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_PodInfo_fieldAccessorTable = new
+    internal_static_GetServiceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_GetServiceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_PodInfo_descriptor,
-        new java.lang.String[] { "Namespace", "Name", "TotalPods", "ReadyPods", "Status", "Restarts", "Age", });
+        internal_static_GetServiceRequest_descriptor,
+        new java.lang.String[] { "Req", "Namespace", });
+    internal_static_GetServiceResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_GetServiceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GetServiceResponse_descriptor,
+        new java.lang.String[] { "Resp", "Services", });
+    internal_static_PortInfo_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_PortInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PortInfo_descriptor,
+        new java.lang.String[] { "Port", "TargetPort", "Protocol", });
+    internal_static_ServiceInfo_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_ServiceInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ServiceInfo_descriptor,
+        new java.lang.String[] { "Name", "Type", "ClusterIp", "ExternalIp", "Ports", "Age", "LabelSelector", });
     com.cloud.pass.grpc.common.Common.getDescriptor();
   }
 
