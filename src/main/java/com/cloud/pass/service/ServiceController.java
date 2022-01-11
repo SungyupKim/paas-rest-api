@@ -1,4 +1,4 @@
-package com.cloud.pass.controller;
+package com.cloud.pass.service;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -11,20 +11,21 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cloud.pass.grpc.client.Client.PodInfo;
-import com.cloud.pass.service.PodInfoService;
+import com.cloud.pass.grpc.client.Client.ServiceInfo;
+import com.cloud.pass.service.ServiceInfoService;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.util.JsonFormat;
 @RestController
-public class PodController {
-	private static final PodInfoService podInfoService = new PodInfoService();
+public class ServiceController {
+	private static final ServiceInfoService serviceInfoService = new ServiceInfoService();
 	@ResponseBody
-	@GetMapping(value="/cluster/{cluster}/namespace/{namespace}/pod", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value="/cluster/{cluster}/namespace/{namespace}/service", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Object> getPodInfo(@PathVariable String cluster, @PathVariable String namespace) {
 		String jsonString = "";
 		try {
 			//String output = JsonFormat.printer().print(podInfoService.getPods(cluster, namespace).getInfoList().get(0));
 			JSONArray jsonArr = new JSONArray();
-			for (PodInfo info : podInfoService.getPods(cluster, namespace).getInfoList()) {
+			for (ServiceInfo info : serviceInfoService.getServiceInfo(cluster, namespace).getServicesList()) {
 				String output = JsonFormat.printer().print(info);
 				JSONObject jsonObject = new JSONObject(output);
 				jsonArr.put(jsonObject);
