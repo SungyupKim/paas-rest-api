@@ -1,0 +1,13 @@
+{
+	"realm": "pass",
+	"auth-server-url": "http://192.168.219.7:8080/auth/",
+	"ssl-required": "external",
+	"resource": "kubectl-restapi",
+	"verify-token-audience": true,
+	"credentials": {
+		"secret": "a03a85bf-e72f-4db6-8ed1-4077a201a364"
+	},
+	"use-resource-role-mappings": true,
+	"confidential-port": 0,
+	"policy-enforcer": {}
+}

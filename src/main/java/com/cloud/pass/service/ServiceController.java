@@ -1,5 +1,7 @@
 package com.cloud.pass.service;
 
+import javax.servlet.http.HttpSession;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
@@ -20,7 +22,7 @@ public class ServiceController {
 	private static final ServiceInfoService serviceInfoService = new ServiceInfoService();
 	@ResponseBody
 	@GetMapping(value="/cluster/{cluster}/namespace/{namespace}/service", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Object> getPodInfo(@PathVariable String cluster, @PathVariable String namespace) {
+	public ResponseEntity<Object> getPodInfo(HttpSession session, @PathVariable String cluster, @PathVariable String namespace) {
 		String jsonString = "";
 		try {
 			//String output = JsonFormat.printer().print(podInfoService.getPods(cluster, namespace).getInfoList().get(0));
@@ -30,8 +32,10 @@ public class ServiceController {
 				JSONObject jsonObject = new JSONObject(output);
 				jsonArr.put(jsonObject);
 			}
+			jsonArr.put(session.getAttribute("name"));
 			System.out.println(jsonArr);
 			JSONObject jsonRoot = new JSONObject();
+			
 			jsonRoot.put("pods", jsonArr);
 			System.out.println(jsonRoot);
 			return new ResponseEntity<Object>(jsonRoot.toString(), HttpStatus.OK);
