@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -12,14 +13,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cloud.pass.grpc.client.Client.PodInfo;
 import com.cloud.pass.grpc.client.Client.ServiceInfo;
-import com.cloud.pass.service.ServiceInfoService;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.util.JsonFormat;
 @RestController
 public class ServiceController {
-	private static final ServiceInfoService serviceInfoService = new ServiceInfoService();
+	@Autowired
+	private ServiceInfoService serviceInfoService;
 	@ResponseBody
 	@GetMapping(value="/cluster/{cluster}/namespace/{namespace}/service", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Object> getPodInfo(HttpSession session, @PathVariable String cluster, @PathVariable String namespace) {

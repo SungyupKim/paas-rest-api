@@ -2,6 +2,7 @@ package com.cloud.pass.pod;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,8 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.util.JsonFormat;
 @RestController
 public class PodController {
-	private static final PodInfoService podInfoService = new PodInfoService();
+	@Autowired
+	PodInfoService podInfoService;
 	@ResponseBody
 	@GetMapping(value="/cluster/{cluster}/namespace/{namespace}/pod", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Object> getPodInfo(@PathVariable String cluster, @PathVariable String namespace) {
