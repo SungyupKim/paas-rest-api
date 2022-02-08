@@ -15,11 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @EnableJpaRepositories("com.cloud.pass.*")
 @EntityScan("com.cloud.pass.*")
 public class PassApplication {
-	public static String runEnvironment;
 	private final static Logger log = Logger.getGlobal();
 	public static void main(String... args) {
-		log.info(args[0]);
-		runEnvironment = args[0];
 		SpringApplication.run(PassApplication.class, args);
 	}
 }
