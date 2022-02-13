@@ -1,4 +1,4 @@
-package com.cloud.pass.cluster;
+package com.cloud.pass.project;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,18 +17,15 @@ import lombok.Setter;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Entity(name = "cluster")
-@Table(name="cluster")
-public class ClusterVO {
+@Entity(name = "project")
+@Table(name="project")
+public class ProjectVO {
 	@Id
-	private String name;
-	
-	@Column
-	private String clusterId;
-	
-	@Column
-	private String kubeconfig;
+	private String namespaceId;
 	
 	@Column
 	private String projectId;
+	
+	@Column
+	private String name;
 }

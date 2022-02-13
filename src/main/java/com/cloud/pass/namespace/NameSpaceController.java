@@ -20,9 +20,12 @@ public class NameSpaceController {
 	@GetMapping(value="/cluster/{cluster}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Object> getNameSpaceInfo(@PathVariable String cluster) {
 		String jsonString = "";
-		//String output = JsonFormat.printer().print(nameSpaceInfoService.getNameSpaces(cluster).getInfoList();
 		JSONObject jsonRoot = new JSONObject();
 		GetNamespaceResponse resp = nameSpaceService.getNamespace(cluster);
+		if (resp == null) {
+			return new ResponseEntity<Object>("NOT FOUND", HttpStatus.NOT_FOUND);
+		}
+		
 		jsonRoot.put("namespaces", resp.getNamespaceList());
 		System.out.println(jsonRoot);
 		return new ResponseEntity<Object>(jsonRoot.toString(), HttpStatus.OK);
