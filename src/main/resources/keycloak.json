@@ -5,7 +5,7 @@
   "resource": "kubectl-restapi",
   "verify-token-audience": false,
   "credentials": {
-    "secret": "a03a85bf-e72f-4db6-8ed1-4077a201a364"
+    "secret": "1e3e55fb-cc41-4aa3-9e0e-900f132dbb11"
   },
   "use-resource-role-mappings": true,
   "confidential-port": 0,
