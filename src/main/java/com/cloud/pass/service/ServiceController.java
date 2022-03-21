@@ -32,7 +32,6 @@ public class ServiceController {
 				JSONObject jsonObject = new JSONObject(output);
 				jsonArr.put(jsonObject);
 			}
-			jsonArr.put(session.getAttribute("name"));
 			System.out.println(jsonArr);
 			JSONObject jsonRoot = new JSONObject();
 			
