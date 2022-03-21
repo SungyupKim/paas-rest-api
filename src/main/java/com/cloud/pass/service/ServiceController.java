@@ -36,7 +36,7 @@ public class ServiceController {
 			System.out.println(jsonArr);
 			JSONObject jsonRoot = new JSONObject();
 			
-			jsonRoot.put("pods", jsonArr);
+			jsonRoot.put("services", jsonArr);
 			System.out.println(jsonRoot);
 			return new ResponseEntity<Object>(jsonRoot.toString(), HttpStatus.OK);
 		} catch (InvalidProtocolBufferException e) {

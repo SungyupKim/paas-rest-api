@@ -26,6 +26,7 @@ public class ServiceInfoService extends CliGrpcService{
 	public GetServiceResponse getServiceInfo(String cluster, String namespace) {
 		super.setClient();
 		ClusterVO clusterInfo = clusterService.findById(cluster);
+		
 		if (clusterInfo == null) {
 			return null;
 		}
