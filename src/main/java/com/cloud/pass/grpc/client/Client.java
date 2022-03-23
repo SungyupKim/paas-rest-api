@@ -40,6 +40,16 @@ public final class Client {
      */
     com.google.protobuf.ByteString
         getNamespaceBytes();
+
+    /**
+     * <code>string labelSelector = 3;</code>
+     */
+    java.lang.String getLabelSelector();
+    /**
+     * <code>string labelSelector = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getLabelSelectorBytes();
   }
   /**
    * Protobuf type {@code GetPodsRequest}
@@ -55,6 +65,7 @@ public final class Client {
     }
     private GetPodsRequest() {
       namespace_ = "";
+      labelSelector_ = "";
     }
 
     @java.lang.Override
@@ -98,6 +109,12 @@ public final class Client {
               java.lang.String s = input.readStringRequireUtf8();
 
               namespace_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              labelSelector_ = s;
               break;
             }
             default: {
@@ -187,6 +204,40 @@ public final class Client {
       }
     }
 
+    public static final int LABELSELECTOR_FIELD_NUMBER = 3;
+    private volatile java.lang.Object labelSelector_;
+    /**
+     * <code>string labelSelector = 3;</code>
+     */
+    public java.lang.String getLabelSelector() {
+      java.lang.Object ref = labelSelector_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        labelSelector_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string labelSelector = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLabelSelectorBytes() {
+      java.lang.Object ref = labelSelector_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        labelSelector_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -207,6 +258,9 @@ public final class Client {
       if (!getNamespaceBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, namespace_);
       }
+      if (!getLabelSelectorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, labelSelector_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -222,6 +276,9 @@ public final class Client {
       }
       if (!getNamespaceBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, namespace_);
+      }
+      if (!getLabelSelectorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, labelSelector_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -246,6 +303,8 @@ public final class Client {
       }
       result = result && getNamespace()
           .equals(other.getNamespace());
+      result = result && getLabelSelector()
+          .equals(other.getLabelSelector());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -263,6 +322,8 @@ public final class Client {
       }
       hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
       hash = (53 * hash) + getNamespace().hashCode();
+      hash = (37 * hash) + LABELSELECTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getLabelSelector().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -404,6 +465,8 @@ public final class Client {
         }
         namespace_ = "";
 
+        labelSelector_ = "";
+
         return this;
       }
 
@@ -436,6 +499,7 @@ public final class Client {
           result.req_ = reqBuilder_.build();
         }
         result.namespace_ = namespace_;
+        result.labelSelector_ = labelSelector_;
         onBuilt();
         return result;
       }
@@ -489,6 +553,10 @@ public final class Client {
         }
         if (!other.getNamespace().isEmpty()) {
           namespace_ = other.namespace_;
+          onChanged();
+        }
+        if (!other.getLabelSelector().isEmpty()) {
+          labelSelector_ = other.labelSelector_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -702,6 +770,75 @@ public final class Client {
   checkByteStringIsUtf8(value);
         
         namespace_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object labelSelector_ = "";
+      /**
+       * <code>string labelSelector = 3;</code>
+       */
+      public java.lang.String getLabelSelector() {
+        java.lang.Object ref = labelSelector_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          labelSelector_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string labelSelector = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLabelSelectorBytes() {
+        java.lang.Object ref = labelSelector_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          labelSelector_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string labelSelector = 3;</code>
+       */
+      public Builder setLabelSelector(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        labelSelector_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string labelSelector = 3;</code>
+       */
+      public Builder clearLabelSelector() {
+        
+        labelSelector_ = getDefaultInstance().getLabelSelector();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string labelSelector = 3;</code>
+       */
+      public Builder setLabelSelectorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        labelSelector_ = value;
         onChanged();
         return this;
       }
@@ -8415,32 +8552,33 @@ public final class Client {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014client.proto\032\014common.proto\"@\n\016GetPodsR" +
+      "\n\014client.proto\032\014common.proto\"W\n\016GetPodsR" +
       "equest\022\033\n\003req\030\001 \001(\0132\016.CommonRequest\022\021\n\tn" +
-      "amespace\030\002 \001(\t\"H\n\017GetPodsResponse\022\035\n\004res" +
-      "p\030\001 \001(\0132\017.CommonResponse\022\026\n\004info\030\002 \003(\0132\010" +
-      ".PodInfo\"\177\n\007PodInfo\022\021\n\tnamespace\030\001 \001(\t\022\014" +
-      "\n\004name\030\002 \001(\t\022\021\n\ttotalPods\030\003 \001(\005\022\021\n\tready" +
-      "Pods\030\004 \001(\005\022\016\n\006status\030\005 \001(\t\022\020\n\010restarts\030\006" +
-      " \001(\005\022\013\n\003age\030\007 \001(\t\"2\n\023GetNamespaceRequest" +
-      "\022\033\n\003req\030\001 \001(\0132\016.CommonRequest\"H\n\024GetName" +
-      "spaceResponse\022\035\n\004resp\030\001 \001(\0132\017.CommonResp" +
-      "onse\022\021\n\tnamespace\030\002 \003(\t\"C\n\021GetServiceReq" +
-      "uest\022\033\n\003req\030\001 \001(\0132\016.CommonRequest\022\021\n\tnam" +
-      "espace\030\002 \001(\t\"S\n\022GetServiceResponse\022\035\n\004re" +
-      "sp\030\001 \001(\0132\017.CommonResponse\022\036\n\010services\030\002 " +
-      "\003(\0132\014.ServiceInfo\">\n\010PortInfo\022\014\n\004port\030\001 " +
-      "\001(\005\022\022\n\ntargetPort\030\002 \001(\005\022\020\n\010protocol\030\003 \001(" +
-      "\t\"\216\001\n\013ServiceInfo\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030" +
-      "\002 \001(\t\022\021\n\tclusterIp\030\003 \001(\t\022\022\n\nexternalIp\030\004" +
-      " \003(\t\022\030\n\005ports\030\005 \003(\0132\t.PortInfo\022\013\n\003age\030\006 " +
-      "\001(\t\022\025\n\rlabelSelector\030\007 \001(\t2\271\001\n\rKubectlCl" +
-      "ient\0228\n\013GetServices\022\022.GetServiceRequest\032" +
-      "\023.GetServiceResponse\"\000\022>\n\rGetNamespaces\022" +
-      "\024.GetNamespaceRequest\032\025.GetNamespaceResp" +
-      "onse\"\000\022.\n\007GetPods\022\017.GetPodsRequest\032\020.Get" +
-      "PodsResponse\"\000B7\n\032com.cloud.pass.grpc.cl" +
-      "ientZ\031kubectl-cli/client;clientb\006proto3"
+      "amespace\030\002 \001(\t\022\025\n\rlabelSelector\030\003 \001(\t\"H\n" +
+      "\017GetPodsResponse\022\035\n\004resp\030\001 \001(\0132\017.CommonR" +
+      "esponse\022\026\n\004info\030\002 \003(\0132\010.PodInfo\"\177\n\007PodIn" +
+      "fo\022\021\n\tnamespace\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tt" +
+      "otalPods\030\003 \001(\005\022\021\n\treadyPods\030\004 \001(\005\022\016\n\006sta" +
+      "tus\030\005 \001(\t\022\020\n\010restarts\030\006 \001(\005\022\013\n\003age\030\007 \001(\t" +
+      "\"2\n\023GetNamespaceRequest\022\033\n\003req\030\001 \001(\0132\016.C" +
+      "ommonRequest\"H\n\024GetNamespaceResponse\022\035\n\004" +
+      "resp\030\001 \001(\0132\017.CommonResponse\022\021\n\tnamespace" +
+      "\030\002 \003(\t\"C\n\021GetServiceRequest\022\033\n\003req\030\001 \001(\013" +
+      "2\016.CommonRequest\022\021\n\tnamespace\030\002 \001(\t\"S\n\022G" +
+      "etServiceResponse\022\035\n\004resp\030\001 \001(\0132\017.Common" +
+      "Response\022\036\n\010services\030\002 \003(\0132\014.ServiceInfo" +
+      "\">\n\010PortInfo\022\014\n\004port\030\001 \001(\005\022\022\n\ntargetPort" +
+      "\030\002 \001(\005\022\020\n\010protocol\030\003 \001(\t\"\216\001\n\013ServiceInfo" +
+      "\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\021\n\tclusterI" +
+      "p\030\003 \001(\t\022\022\n\nexternalIp\030\004 \003(\t\022\030\n\005ports\030\005 \003" +
+      "(\0132\t.PortInfo\022\013\n\003age\030\006 \001(\t\022\025\n\rlabelSelec" +
+      "tor\030\007 \001(\t2\271\001\n\rKubectlClient\0228\n\013GetServic" +
+      "es\022\022.GetServiceRequest\032\023.GetServiceRespo" +
+      "nse\"\000\022>\n\rGetNamespaces\022\024.GetNamespaceReq" +
+      "uest\032\025.GetNamespaceResponse\"\000\022.\n\007GetPods" +
+      "\022\017.GetPodsRequest\032\020.GetPodsResponse\"\000B7\n" +
+      "\032com.cloud.pass.grpc.clientZ\031kubectl-cli" +
+      "/client;clientb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8460,7 +8598,7 @@ public final class Client {
     internal_static_GetPodsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetPodsRequest_descriptor,
-        new java.lang.String[] { "Req", "Namespace", });
+        new java.lang.String[] { "Req", "Namespace", "LabelSelector", });
     internal_static_GetPodsResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_GetPodsResponse_fieldAccessorTable = new

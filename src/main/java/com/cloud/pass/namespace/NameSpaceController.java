@@ -17,7 +17,7 @@ public class NameSpaceController {
 	@Autowired
 	private NamespaceService nameSpaceService;
 	@ResponseBody
-	@GetMapping(value="/cluster/{cluster}", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value="/cluster/{cluster}/namespace", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Object> getNameSpaceInfo(@PathVariable String cluster) {
 		String jsonString = "";
 		JSONObject jsonRoot = new JSONObject();
