@@ -25,4 +25,8 @@ public class ProjectService {
 		ProjectInformation info = new ProjectInformation(clusterList, namespaces);
 		return info;
 	}
+	
+	public List<ProjectVO> findAllProjects(){
+		return projectRepository.findAll();
+	}
 }

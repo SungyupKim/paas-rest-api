@@ -21,8 +21,6 @@ import lombok.Setter;
 @Table(name="project")
 public class ProjectVO {
 	@Id
-	private String namespaceId;
-	
 	@Column
 	private String projectId;
 	

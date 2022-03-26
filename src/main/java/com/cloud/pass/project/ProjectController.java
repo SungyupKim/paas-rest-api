@@ -30,4 +30,10 @@ public class ProjectController {
 		ProjectInformation information = service.findProjectResourcesByProjectId(projectId);
 		return new ResponseEntity<ProjectInformation>(information, HttpStatus.OK);
 	}
+	
+	@ResponseBody
+	@GetMapping(value = "/projects", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<ProjectVO>> getAllProjectInfo() {
+		return new ResponseEntity<List<ProjectVO>>(service.findAllProjects(), HttpStatus.OK);
+	}
 }

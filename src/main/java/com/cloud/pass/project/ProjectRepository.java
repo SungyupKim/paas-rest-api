@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProjectRepository extends JpaRepository<ProjectVO, String>{
 	public List<ProjectVO> findByName(String name);
+	public List<ProjectVO> findAll();
 }
