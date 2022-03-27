@@ -1,5 +1,6 @@
 package com.cloud.pass.project;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -18,6 +19,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cloud.pass.userinfo.UserInfo;
+import com.fasterxml.jackson.annotation.JsonRootName;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 @RestController
 public class ProjectController {
@@ -26,14 +30,18 @@ public class ProjectController {
 	
 	@ResponseBody
 	@GetMapping(value = "/project/{projectId}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<ProjectInformation> getProjectInfo(@PathVariable String projectId) {
+	public Map<String, Object> getProjectInfo(@PathVariable String projectId) {
+		Map<String, Object> response = new LinkedHashMap<String, Object>();
 		ProjectInformation information = service.findProjectResourcesByProjectId(projectId);
-		return new ResponseEntity<ProjectInformation>(information, HttpStatus.OK);
+		response.put("projectResources", information);
+		return response;
 	}
 	
 	@ResponseBody
 	@GetMapping(value = "/projects", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<ProjectVO>> getAllProjectInfo() {
-		return new ResponseEntity<List<ProjectVO>>(service.findAllProjects(), HttpStatus.OK);
+	public Map<String, Object> getAllProjectInfo() {
+		Map<String, Object> response = new LinkedHashMap<String, Object>();
+		response.put("projects", service.findAllProjects());
+		return response;
 	}
 }
